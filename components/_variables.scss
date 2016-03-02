@@ -19,10 +19,9 @@ $colour_WarningDark: darken($colour_Warning, 10%);
 $colour_Success: #28BD8B;
 $colour_SuccessDark: darken($colour_Success, 10%);
 
-$colour_Background: #f4f5f7;
-$colour_BackgroundLight: #ffffff;
-$colour_BackgroundDark: #dcdde4;
+$colour_Background: #ffffff;
+$colour_BackgroundHeader: #fafafc;
 
-$colour_Border: darken($colour_BackgroundDark, 5%);
+$colour_Border: #dddddd;
 
 $border_Radius: 3px;

@@ -20,7 +20,7 @@
         margin-bottom: 5px;
         padding: 7px;
         color: $colour_Font;
-        background-color: $colour_BackgroundLight;
+        background-color: $colour_Background;
         border: 2px solid $colour_Border;
         border-radius: $border_Radius;
         font-weight: 600;
@@ -36,7 +36,7 @@
         left: 10px;
         width: 10px;
         height: 10px;
-        background-color: $colour_BackgroundLight;
+        background-color: $colour_Background;
         border-bottom: 2px solid $colour_Border;
         border-right: 2px solid $colour_Border;
         transform: rotate(45deg);

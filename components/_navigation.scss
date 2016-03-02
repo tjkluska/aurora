@@ -10,7 +10,8 @@
 .sidebar {
     width: 280px;
     height: 100%;
-    background-color: $colour_BackgroundLight;
+    background-color: $colour_BackgroundHeader;
+    border-right: 1px solid $colour_Border;
     overflow-y: auto;
 
     + .content {

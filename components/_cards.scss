@@ -22,7 +22,8 @@
     flex-shrink: 0;
     width: 250px;
     margin: 15px;
-    background-color: $colour_BackgroundLight;
+    background-color: $colour_Background;
+    border: 1px solid $colour_Border;
     border-radius: $border_Radius;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
     transition: box-shadow 0.2s ease-out;
@@ -84,7 +85,7 @@
 
 .card-header {
     min-height: 180px;
-    background-color: $colour_BackgroundDark;
+    background-color: $colour_BackgroundHeader;
     border-top-left-radius: $border_Radius;
     border-top-right-radius: $border_Radius;
 

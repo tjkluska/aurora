@@ -4,9 +4,9 @@
 .panel {
     min-width: 80px;
     min-height: 36px;
-    background-color: $colour_BackgroundLight;
+    background-color: $colour_Background;
+    border: 1px solid $colour_Border;
     border-radius: $border_Radius;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
 }
 
 .panel-header,
@@ -15,12 +15,10 @@
 }
 
 .panel-header {
+    background-color: $colour_BackgroundHeader;
+    border-bottom: 1px solid $colour_Border;
     border-top-left-radius: $border_Radius;
     border-top-right-radius: $border_Radius;
-
-    &.panel-header-dark {
-        background-color: $colour_BackgroundDark;
-    }
 
     & .panel-title {
         padding: 0;
@@ -28,7 +26,7 @@
 }
 
 .panel-content {
-    padding: 0 15px 15px 15px;
+    padding: 15px;
 }
 
 .panel-title {
@@ -39,11 +37,12 @@
 }
 
 .panel-footer {
-    padding-top: 0;
+    background-color: $colour_BackgroundHeader;
+    border-top: 1px solid $colour_Border;
     border-bottom-left-radius: $border_Radius;
     border-bottom-right-radius: $border_Radius;
 
     &.panel-footer-dark {
-        background-color: $colour_BackgroundDark;
+        background-color: $colour_BackgroundHeader;
     }
 }

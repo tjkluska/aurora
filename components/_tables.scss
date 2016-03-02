@@ -2,8 +2,8 @@
 @import "_variables.scss";
 
 .table-wrapper {
-    background-color: $colour_BackgroundLight;
-    border: 2px solid $colour_BackgroundDark;
+    background-color: $colour_Background;
+    border: 1px solid $colour_Border;
     border-radius: $border_Radius;
 }
 
@@ -29,5 +29,6 @@ th,
     padding: 15px;
     font-weight: 600;
     color: $colour_FontDark;
-    border-bottom: 2px solid $colour_BackgroundDark;
+    background-color: $colour_BackgroundHeader;
+    border-bottom: 1px solid $colour_Border;
 }
