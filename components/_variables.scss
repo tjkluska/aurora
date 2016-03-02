@@ -23,4 +23,6 @@ $colour_Background: #f4f5f7;
 $colour_BackgroundLight: #ffffff;
 $colour_BackgroundDark: #dcdde4;
 
+$colour_Border: darken($colour_BackgroundDark, 5%);
+
 $border_Radius: 3px;
