@@ -1,0 +1,110 @@
+
+@import "_variables.scss";
+
+.card-stack {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;;
+
+    &.card-stack-left {
+        justify-content: flex-start;
+    }
+
+    &.card-stack-right {
+        justify-content: flex-end;
+    }
+}
+
+.card {
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 250px;
+    margin: 15px;
+    background-color: $colour_BackgroundLight;
+    border-radius: $border_Radius;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+    transition: box-shadow 0.2s ease-out;
+
+    &:hover {
+        box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3);
+    }
+
+    &.card-accent,
+    &.card-business,
+    &.card-danger,
+    &.card-warning,
+    &.card-success {
+
+        & .card-header {
+            color: $colour_FontInverted;
+
+            & * {
+                color: inherit;
+            }
+        }
+    }
+
+    &.card-accent {
+
+        & .card-header {
+            background-color: $colour_Accent;
+        }
+    }
+
+    &.card-business {
+
+        & .card-header {
+            background-color: $colour_Business;
+        }
+    }
+
+    &.card-danger {
+
+        & .card-header {
+            background-color: $colour_Danger;
+        }
+    }
+
+    &.card-warning {
+
+        & .card-header {
+            background-color: $colour_Warning;
+        }
+    }
+
+    &.card-success {
+
+        & .card-header {
+            background-color: $colour_Success;
+        }
+    }
+}
+
+.card-header {
+    min-height: 180px;
+    background-color: $colour_BackgroundDark;
+    border-top-left-radius: $border_Radius;
+    border-top-right-radius: $border_Radius;
+
+    & img {
+        display: block;
+        width: 100%;
+        height: auto;
+        border-top-left-radius: $border_Radius;
+        border-top-right-radius: $border_Radius;
+    }
+}
+
+.card-content {
+    min-height: 48px;
+    padding: 15px;
+}
+
+.card-footer {
+    padding: 15px;
+    padding-top: 0;
+    border-bottom-left-radius: $border_Radius;
+    border-bottom-right-radius: $border_Radius;
+}

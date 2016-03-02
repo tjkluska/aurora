@@ -1,0 +1,82 @@
+
+@import "_variables.scss";
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: $font_Size;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+
+    &:before,
+    &:after {
+        @extend *;
+    }
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+    color: $colour_Font;
+    background-color: $colour_Background;
+}
+
+header {
+    margin-bottom: 64px;
+}
+
+footer {
+    margin-top: 64px;
+    padding: 36px 0;
+    background-color: $colour_BackgroundDark;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    line-height: 1.5em;
+    font-weight: 600;
+    color: $colour_FontDark;
+}
+
+a {
+    color: $colour_Accent;
+    text-decoration: none;
+
+    &:hover {
+        color: $colour_AccentDark;
+    }
+}
+
+fieldset {
+    margin: 0 0 36px 0;
+    padding: 0;
+    border: none;
+}
+
+legend {
+    margin: 0 0 15px 0;
+    font-size: 22px;
+    font-weight: 600;
+    color: $colour_FontDark;
+}
+
+label {
+    display: block;
+    margin-bottom: 3px;
+    font-weight: 600;
+    color: $colour_FontDark;
+}

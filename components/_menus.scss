@@ -1,0 +1,59 @@
+
+@import "_variables.scss";
+
+.menu {
+    &.menu-horizontal {
+
+        & .menu-group {
+            display: inline-block;
+            vertical-align: top;
+            margin-top: 0;
+        }
+
+        & .menu-item {
+            padding: 5px 30px 0 0;
+        }
+
+    }
+}
+
+.menu-group {
+    display: block;
+    margin-top: 36px;
+
+    &:first-child {
+        margin-top: 0;
+    }
+}
+
+.menu-group-title {
+    font-size: $font_Size;
+    font-weight: 600;
+    color: #998d95;
+    margin-bottom: 1em;
+}
+
+.menu-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.menu-item {
+    padding: 5px 15px;
+    color: $colour_Font;
+
+    & .menu-item-link,
+    & .label,
+    & .icon {
+        color: inherit;
+    }
+
+    & .menu-item-link {
+        color: inherit;
+    }
+
+    & > .icon {
+        padding-right: 10px;
+    }
+}

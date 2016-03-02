@@ -1,0 +1,33 @@
+
+@import "_variables.scss";
+
+.table-wrapper {
+    background-color: $colour_BackgroundLight;
+    border: 2px solid $colour_BackgroundDark;
+    border-radius: $border_Radius;
+}
+
+table,
+.table  {
+    display: table;
+    table-layout: fixed;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th,
+.th,
+td,
+.td {
+    display: table-cell;
+    padding: 8px 15px;
+    text-align: left;
+}
+
+th,
+.th {
+    padding: 15px;
+    font-weight: 600;
+    color: $colour_FontDark;
+    border-bottom: 2px solid $colour_BackgroundDark;
+}

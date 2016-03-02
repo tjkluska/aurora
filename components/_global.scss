@@ -1,0 +1,25 @@
+
+@import "_variables.scss";
+
+.no-margin {
+    margin: 0;
+}
+
+.no-border {
+    border: none;
+}
+
+.border-all {
+    border: 2px solid $colour_BackgroundDark;
+}
+
+.drop-shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
+}
+
+.drop-shadow-hover {
+
+    &:hover {
+        box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.3);
+    }
+}

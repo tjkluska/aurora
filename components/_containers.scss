@@ -1,0 +1,119 @@
+
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.container {
+    width: 1075px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    &.container-fluid {
+        width: 100%;
+    }
+}
+
+.header-block {
+
+    & .title,
+    & .subtitle {
+        margin: 0;
+    }
+
+    & .title {
+        font-size: 24px;
+    }
+
+    & .subtitle {
+        font-size: 14px;
+    }
+
+}
+
+.header-block-large {
+
+    & .title {
+        font-size: 28px;
+    }
+
+    & .subtitle {
+        font-size: 16px;
+    }
+}
+
+.header-block-small {
+
+    & .title {
+        font-size: 18px;
+    }
+
+    & .subtitle {
+        font-size: $font_Size;
+    }
+}
+
+.hero {
+    padding: 20px 0;
+
+    & .header-block {
+
+        & .title {
+            font-size: 36px;
+        }
+
+        & .subtitle {
+            font-size: 21px;
+        }
+
+    }
+
+}
+
+.control-group {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.control {
+    flex-shrink: 1;
+    margin-left: 0;
+    margin-right: 10px;
+
+    &:last-child {
+        margin-right: 0;
+    }
+
+    &.control-right {
+        margin-left: auto;
+
+        &:first-child {
+            margin-right: 0;
+        }
+    }
+
+    &.control-fill {
+        flex-grow: 1;
+    }
+}
+
+
+@media screen and (max-width: 1325px) {
+
+    .layout-horizontal {
+
+        .container {
+            width: 100%;
+        }
+    }
+
+}
+
+@media screen and (max-width: 1075px) {
+
+    .container {
+        width: 100%;
+    }
+
+}

@@ -1,0 +1,26 @@
+
+$grid_columns: 12;
+
+$font_Size: 14px;
+
+$colour_Font: #80737c;
+$colour_FontLight: lighten($colour_Font, 15%);
+$colour_FontDark: darken($colour_Font, 15%);
+$colour_FontInverted: #ffffff;
+
+$colour_Accent: #2196f3;
+$colour_AccentDark: darken($colour_Accent, 10%);
+$colour_Business: #2196f3;
+$colour_BusinessDark: darken($colour_Business, 10%);
+$colour_Danger: #DE6060;
+$colour_DangerDark: darken($colour_Danger, 10%);
+$colour_Warning: #F7C46A;
+$colour_WarningDark: darken($colour_Warning, 10%);
+$colour_Success: #28BD8B;
+$colour_SuccessDark: darken($colour_Success, 10%);
+
+$colour_Background: #f4f5f7;
+$colour_BackgroundLight: #ffffff;
+$colour_BackgroundDark: #dcdde4;
+
+$border_Radius: 3px;

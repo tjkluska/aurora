@@ -1,0 +1,22 @@
+
+@import "_variables.scss";
+
+.clip-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.title {
+    margin-top: 0;
+}
+
+.subtitle {
+    color: $colour_FontLight;
+}
+
+.metadata {
+    font-size: 12px;
+    font-weight: 600;
+    color: $colour_FontLight;
+}

@@ -1,0 +1,110 @@
+
+@import "_variables.scss";
+
+.button {
+    display: inline-block;
+    margin: 0 5px;
+    padding: 12px 25px;
+    font-family: inherit;
+    font-weight: 600;
+    color: $colour_FontInverted;
+    background-color: $colour_Accent;
+    outline: none;
+    border: none;
+    border-radius: $border_Radius;
+    cursor: pointer;
+    text-align: center;
+
+    &:hover {
+        color: $colour_FontInverted;
+        background-color: $colour_AccentDark;
+    }
+
+    &.button-business {
+        background-color: $colour_Business;
+
+        &:hover {
+            background-color: $colour_BusinessDark;
+        }
+    }
+
+    &.button-danger {
+        background-color: $colour_Danger;
+
+        &:hover {
+            background-color: $colour_DangerDark;
+        }
+    }
+
+    &.button-warning {
+        background-color: $colour_Warning;
+
+        &:hover {
+            background-color: $colour_WarningDark;
+        }
+    }
+
+    &.button-success {
+        background-color: $colour_Success;
+
+        &:hover {
+            background-color: $colour_SuccessDark;
+        }
+    }
+
+    & .icon {
+        vertical-align: middle;
+        margin-right: 5px;
+    }
+}
+
+.icon-button {
+    display: inline-block;
+    margin: 0 5px;
+    color: $colour_FontLight;
+    cursor: pointer;
+    outline: none;
+    background: none;
+    border: none;
+    text-align: center;
+    line-height: 1em;
+
+    &:hover {
+        color: $colour_FontDark;
+    }
+
+    &.button-accent {
+
+        &:hover {
+            color: $colour_AccentDark;
+        }
+    }
+
+    &.button-business {
+
+        &:hover {
+            color: $colour_BusinessDark;
+        }
+    }
+
+    &.button-danger {
+
+        &:hover {
+            color: $colour_DangerDark;
+        }
+    }
+
+    &.button-warning {
+
+        &:hover {
+            color: $colour_WarningDark;
+        }
+    }
+
+    &.button-success {
+
+        &:hover {
+            color: $colour_SuccessDark;
+        }
+    }
+}

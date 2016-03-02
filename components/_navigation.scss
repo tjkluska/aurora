@@ -1,0 +1,65 @@
+
+@import "_variables.scss";
+
+.sidebar,
+.content {
+    padding-top: 48px;
+    padding-bottom: 48px;
+}
+
+.sidebar {
+    width: 280px;
+    height: 100%;
+    background-color: $colour_BackgroundLight;
+    overflow-y: auto;
+
+    + .content {
+        padding-left: 280px;
+    }
+}
+
+.sidebar-block {
+    margin-bottom: 64px;
+    padding: 0 20px;
+}
+
+.navbar {
+    width: 100%;
+    height: 64px;
+
+    + .content {
+        padding-top: 64px;
+    }
+}
+
+nav {
+
+    & .menu-group-title {
+        padding: 0 20px;
+    }
+
+    & .menu-item {
+        padding-top: 2px;
+        padding-bottom: 2px;
+        font-weight: 600;
+        color: $colour_FontLight;
+        border-left: 4px solid transparent;
+
+        &:hover,
+        &.active {
+            color: $colour_FontDark;
+            border-color: $colour_Accent;
+        }
+
+        & .menu-item-link {
+            display: block;
+            padding-top: 10px;
+            padding-bottom: 10px;
+        }
+
+        & .icon {
+            margin-right: 15px;
+        }
+    }
+
+}

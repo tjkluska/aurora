@@ -1,0 +1,49 @@
+
+@import "_variables.scss";
+
+.panel {
+    min-width: 80px;
+    min-height: 36px;
+    background-color: $colour_BackgroundLight;
+    border: 2px solid $colour_BackgroundDark;
+    border-radius: $border_Radius;
+}
+
+.panel-header,
+.panel-footer {
+    padding: 15px;
+}
+
+.panel-header {
+    border-top-left-radius: $border_Radius;
+    border-top-right-radius: $border_Radius;
+
+    &.panel-header-dark {
+        background-color: $colour_BackgroundDark;
+    }
+
+    & .panel-title {
+        padding: 0;
+    }
+}
+
+.panel-content {
+    padding: 0 15px 15px 15px;
+}
+
+.panel-title {
+    margin: 0;
+    padding: 15px;
+    font-size: $font_Size;
+    font-weight: 600;
+}
+
+.panel-footer {
+    padding-top: 0;
+    border-bottom-left-radius: $border_Radius;
+    border-bottom-right-radius: $border_Radius;
+
+    &.panel-footer-dark {
+        background-color: $colour_BackgroundDark;
+    }
+}
