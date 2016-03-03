@@ -23,6 +23,20 @@
     & .panel-title {
         padding: 0;
     }
+
+    & input:not([type="submit"]),
+    & input:not([type="checkbox"]),
+    & input:not([type="radio"]),
+    & select,
+    & .input-icon,
+    & .input-loadable {
+        width: 150px;
+        height: 21px;
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color: transparent;
+        border: none;
+    }
 }
 
 .panel-content {

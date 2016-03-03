@@ -15,6 +15,21 @@ table,
     width: 100%;
 }
 
+.table-striped {
+
+    & tr,
+    & .tr {
+
+        &:nth-child(even) {
+
+            & td,
+            & .td {
+                background-color: $colour_BackgroundStripe;
+            }
+        }
+    }
+}
+
 th,
 .th,
 td,
@@ -22,6 +37,10 @@ td,
     display: table-cell;
     padding: 8px 15px;
     text-align: left;
+
+    &:not(:last-of-type) {
+        border-right: 1px solid $colour_Border;
+    }
 }
 
 th,
@@ -31,4 +50,34 @@ th,
     color: $colour_FontDark;
     background-color: $colour_BackgroundHeader;
     border-bottom: 1px solid $colour_Border;
+
+    & .toggle {
+        background-color: $colour_Background;
+    }
+
+    & input:not([type="submit"]),
+    & input:not([type="checkbox"]),
+    & input:not([type="radio"]),
+    & select,
+    & .input-icon,
+    & .input-loadable {
+        width: 150px;
+        height: 21px;
+        padding-top: 0;
+        padding-bottom: 0;
+        background-color: transparent;
+        border: none;
+    }
+}
+
+tr,
+.tr {
+
+    &:not(:last-child) {
+
+        & td,
+        & .td {
+            border-bottom: 1px solid $colour_BorderLight;
+        }
+    }
 }

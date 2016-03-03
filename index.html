@@ -1,413 +1,762 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <meta charset="utf-8">
-    <title></title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="aurora.min.css" charset="utf-8">
-</head>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,400italic,600,600italic,700" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="aurora.min.css" charset="utf-8">
+    </head>
 
-<body class="layout layout-horizontal">
-    <div class="sidebar">
-        <div class="sidebar-block">
-            <div class="header-block header-block">
-                <img src="images/joe.jpg" alt="Joe" class="avatar">
-                <h2 class="title">Andrew Courtice</h2>
-                <h3 class="subtitle">Applications Developer</h3>
+    <body class="layout layout-horizontal">
+        <div class="sidebar">
+            <div class="sidebar-block">
+                <div class="header-block header-block">
+                    <img src="images/joe.jpg" alt="Joe" class="avatar">
+                    <h2 class="title">Andrew Courtice</h2>
+                    <h3 class="subtitle">Applications Developer</h3>
+                </div>
             </div>
+            <nav>
+                <div class="menu">
+                    <div class="menu-group">
+                        <ul class="menu-list">
+                            <li class="menu-item active">
+                                <a href="#" class="menu-item-link">
+                                    <div class="control-group">
+                                        <span class="material-icons icon control">home</span>
+                                        <span class="control control-fill">Home</span>
+                                        <span class="label label-accent control">5</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-item-link">
+                                    <div class="control-group">
+                                        <span class="material-icons icon control">cloud</span>
+                                        <span class="control control-fill">Repositories</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-item-link">
+                                    <div class="control-group">
+                                        <span class="material-icons icon control">account_box</span>
+                                        <span class="control control-fill">Profile</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="menu-group">
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <a href="#" class="menu-item-link">
+                                    <div class="control-group">
+                                        <span class="material-icons icon control">settings</span>
+                                        <span class="control control-fill">Settings</span>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="#" class="menu-item-link">
+                                    <div class="control-group">
+                                        <span class="material-icons icon control">settings</span>
+                                        <span class="control control-fill">Logout</span>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
         </div>
-        <nav>
-            <div class="menu">
-                <div class="menu-group">
-                    <ul class="menu-list">
-                        <li class="menu-item active">
-                            <a href="#" class="menu-item-link">
-                                <div class="control-group">
-                                    <span class="material-icons icon control">home</span>
-                                    <span class="control control-fill">Home</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#" class="menu-item-link">
-                                <div class="control-group">
-                                    <span class="material-icons icon control">cloud</span>
-                                    <span class="control control-fill">Repositories</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#" class="menu-item-link">
-                                <div class="control-group">
-                                    <span class="material-icons icon control">account_box</span>
-                                    <span class="control control-fill">Profile</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
+        <div class="content">
+            <header>
+                <div class="container">
+                    <div class="header-block header-block-large">
+                        <h1 class="title">Sample Application</h1>
+                        <h2 class="subtitle">Subtitle</h2>
+                    </div>
                 </div>
-                <div class="menu-group">
-                    <ul class="menu-list">
-                        <li class="menu-item">
-                            <a href="#" class="menu-item-link">
-                                <div class="control-group">
-                                    <span class="material-icons icon control">settings</span>
-                                    <span class="control control-fill">Settings</span>
-                                </div>
-                            </a>
-                        </li>
-                        <li class="menu-item">
-                            <a href="#" class="menu-item-link">
-                                <div class="control-group">
-                                    <span class="material-icons icon control">settings</span>
-                                    <span class="control control-fill">Logout</span>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-    <div class="content">
-        <header>
+            </header>
             <div class="container">
-                <div class="header-block header-block-large">
-                    <h1 class="title">Sample Application</h1>
-                    <h2 class="subtitle">Subtitle</h2>
+                <div class="row">
+                    <div class="column-12">
+                        <h3>Random Title</h3>
+                        <p>
+                            Lorem ipsum
+                            <span class="label">dolor</span>
+                            sit
+                            <span class="label label-round label-accent">dolor</span>
+                            amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                        <h3>Random Title</h3>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </p>
+                    </div>
                 </div>
-            </div>
-        </header>
-        <div class="container">
-            <div class="row">
-                <div class="column-12">
-                    <h3>Random Title</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                    <h3>Random Title</h3>
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="column-12">
-                    <div class="card-stack">
-                        <div class="card card-business">
-                            <div class="card-header">
-                                <img src="images/1.png" alt="1" />
-                            </div>
-                            <div class="card-content">
-                                <div class="header-block header-block-small">
-                                    <h2 class="title">Andrew Courtice</h2>
-                                    <h3 class="subtitle">Applications Developer</h3>
+                <div class="row">
+                    <div class="column-12">
+                        <div class="card-stack">
+                            <div class="card card-business">
+                                <div class="card-header">
+                                    <img src="images/1.png" alt="1"/>
                                 </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
-                            </div>
-                            <div class="card-footer control-group">
-                                <a href="#" class="icon-button button-business control" data-tooltip="Like this page"><span class="material-icons icon">thumb_up</span></a>
-                                <a href="#" class="icon-button button-danger control"><span class="material-icons icon">favorite</span></a>
-                                <span class="metadata control control-right">29 May 2016</span>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="images/2.png" alt="2" />
-                            </div>
-                            <div class="card-content">
-                                <div class="header-block header-block-small">
-                                    <h2 class="title">Andrew Courtice</h2>
-                                    <h3 class="subtitle">Applications Developer</h3>
+                                <div class="card-content">
+                                    <div class="header-block header-block-small">
+                                        <h2 class="title">Andrew Courtice</h2>
+                                        <h3 class="subtitle">Applications Developer</h3>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
                                 </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
-                            </div>
-                            <div class="card-footer control-group">
-                                <a href="#" class="button control control-fill"><span class="material-icons icon">thumb_up</span> Do Something</a>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header">
-                                <img src="images/3.png" alt="3" />
-                            </div>
-                            <div class="card-content">
-                                <div class="header-block header-block-small">
-                                    <h2 class="title">Andrew Courtice</h2>
-                                    <h3 class="subtitle">Applications Developer</h3>
+                                <div class="card-footer control-group">
+                                    <a href="#" class="icon-button button-business control" data-tooltip="Like this page">
+                                        <span class="material-icons icon">thumb_up</span>
+                                    </a>
+                                    <a href="#" class="icon-button button-danger control">
+                                        <span class="material-icons icon">favorite</span>
+                                    </a>
+                                    <span class="metadata control control-right">29 May 2016</span>
                                 </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
                             </div>
-                            <div class="card-footer control-group">
-                                <a href="#" class="icon-button button-business control"><span class="material-icons icon">thumb_up</span></a>
-                                <a href="#" class="icon-button button-danger control"><span class="material-icons icon">favorite</span></a>
-                                <span class="metadata control control-right">29 May 2016</span>
-                            </div>
-                        </div>
-                        <div class="card card-business">
-                            <div class="card-header">
-                                <img src="images/4.png" alt="4" />
-                            </div>
-                            <div class="card-content">
-                                <div class="header-block header-block-small">
-                                    <h2 class="title">Andrew Courtice</h2>
-                                    <h3 class="subtitle">Applications Developer</h3>
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="images/2.png" alt="2"/>
                                 </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
-                            </div>
-                            <div class="card-footer control-group">
-                                <a href="#" class="icon-button button-business control"><span class="material-icons icon">thumb_up</span></a>
-                                <a href="#" class="icon-button button-danger control"><span class="material-icons icon">favorite</span></a>
-                                <span class="metadata control control-right">29 May 2016</span>
-                            </div>
-                        </div>
-                        <div class="card card-business">
-                            <div class="card-header">
-                                <img src="images/5.png" alt="5" />
-                            </div>
-                            <div class="card-content">
-                                <div class="header-block header-block-small">
-                                    <h2 class="title">Andrew Courtice</h2>
-                                    <h3 class="subtitle">Applications Developer</h3>
+                                <div class="card-content">
+                                    <div class="header-block header-block-small">
+                                        <h2 class="title">Andrew Courtice</h2>
+                                        <h3 class="subtitle">Applications Developer</h3>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
                                 </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
-                            </div>
-                            <div class="card-footer control-group">
-                                <a href="#" class="icon-button button-business control"><span class="material-icons icon">thumb_up</span></a>
-                                <a href="#" class="icon-button button-danger control"><span class="material-icons icon">favorite</span></a>
-                                <span class="metadata control control-right">29 May 2016</span>
-                            </div>
-                        </div>
-                        <div class="card card-business">
-                            <div class="card-header">
-                                <img src="images/6.png" alt="6" />
-                            </div>
-                            <div class="card-content">
-                                <div class="header-block header-block-small">
-                                    <h2 class="title">Andrew Courtice</h2>
-                                    <h3 class="subtitle">Applications Developer</h3>
+                                <div class="card-footer control-group">
+                                    <a href="#" class="button control control-fill">
+                                        <span class="material-icons icon">thumb_up</span>
+                                        Do Something</a>
                                 </div>
-                                <p>
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                </p>
                             </div>
-                            <div class="card-footer control-group">
-                                <a href="#" class="icon-button button-business control"><span class="material-icons icon">thumb_up</span></a>
-                                <a href="#" class="icon-button button-danger control"><span class="material-icons icon">favorite</span></a>
-                                <span class="metadata control control-right">29 May 2016</span>
+                            <div class="card">
+                                <div class="card-header">
+                                    <img src="images/3.png" alt="3"/>
+                                </div>
+                                <div class="card-content">
+                                    <div class="header-block header-block-small">
+                                        <h2 class="title">Andrew Courtice</h2>
+                                        <h3 class="subtitle">Applications Developer</h3>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                </div>
+                                <div class="card-footer control-group">
+                                    <a href="#" class="icon-button button-business control">
+                                        <span class="material-icons icon">thumb_up</span>
+                                    </a>
+                                    <a href="#" class="icon-button button-danger control">
+                                        <span class="material-icons icon">favorite</span>
+                                    </a>
+                                    <span class="metadata control control-right">29 May 2016</span>
+                                </div>
+                            </div>
+                            <div class="card card-business">
+                                <div class="card-header">
+                                    <img src="images/4.png" alt="4"/>
+                                </div>
+                                <div class="card-content">
+                                    <div class="header-block header-block-small">
+                                        <h2 class="title">Andrew Courtice</h2>
+                                        <h3 class="subtitle">Applications Developer</h3>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                </div>
+                                <div class="card-footer control-group">
+                                    <a href="#" class="icon-button button-business control">
+                                        <span class="material-icons icon">thumb_up</span>
+                                    </a>
+                                    <a href="#" class="icon-button button-danger control">
+                                        <span class="material-icons icon">favorite</span>
+                                    </a>
+                                    <span class="metadata control control-right">29 May 2016</span>
+                                </div>
+                            </div>
+                            <div class="card card-business">
+                                <div class="card-header">
+                                    <img src="images/5.png" alt="5"/>
+                                </div>
+                                <div class="card-content">
+                                    <div class="header-block header-block-small">
+                                        <h2 class="title">Andrew Courtice</h2>
+                                        <h3 class="subtitle">Applications Developer</h3>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                </div>
+                                <div class="card-footer control-group">
+                                    <a href="#" class="icon-button button-business control">
+                                        <span class="material-icons icon">thumb_up</span>
+                                    </a>
+                                    <a href="#" class="icon-button button-danger control">
+                                        <span class="material-icons icon">favorite</span>
+                                    </a>
+                                    <span class="metadata control control-right">29 May 2016</span>
+                                </div>
+                            </div>
+                            <div class="card card-business">
+                                <div class="card-header">
+                                    <img src="images/6.png" alt="6"/>
+                                </div>
+                                <div class="card-content">
+                                    <div class="header-block header-block-small">
+                                        <h2 class="title">Andrew Courtice</h2>
+                                        <h3 class="subtitle">Applications Developer</h3>
+                                    </div>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                    </p>
+                                </div>
+                                <div class="card-footer control-group">
+                                    <a href="#" class="icon-button button-business control">
+                                        <span class="material-icons icon">thumb_up</span>
+                                    </a>
+                                    <a href="#" class="icon-button button-danger control">
+                                        <span class="material-icons icon">favorite</span>
+                                    </a>
+                                    <span class="metadata control control-right">29 May 2016</span>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="column-4">
-                    <div class="panel">
-                        <div class="panel-header control-group">
-                            <h2 class="panel-title control control-fill">Simple Panel</h2>
-                            <a href="#" class="icon-button control"><span class="material-icons icon">settings</span></a>
-                            <a href="#" class="icon-button control"><span class="material-icons icon">settings</span></a>
-                            <a href="#" class="icon-button control"><span class="material-icons icon">settings</span></a>
-                        </div>
-                        <div class="panel-content">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                        </div>
-                        <div class="panel-footer control-group">
-                            <a href="#" class="icon-button control"><span class="material-icons icon">thumb_up</span></a>
-                            <a href="#" class="icon-button control"><span class="material-icons icon">favorite</span></a>
-                            <span class="metadata control control-right">29 May 2016</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="column-4">
-                    <div class="panel">
-                        <div class="panel-header control-group">
-                            <h2 class="panel-title control control-fill">Simple Panel</h2>
-                            <a href="#" class="icon-button control"><span class="material-icons icon">settings</span></a>
-                        </div>
-                        <div class="panel-content">
-                            <div class="header-block header-block-small">
-                                <img src="images/joe.jpg" alt="Joe" class="avatar">
-                                <h2 class="title">Andrew Courtice</h2>
-                                <h3 class="subtitle">Applications Developer</h3>
+                <div class="row">
+                    <div class="column-4">
+                        <div class="panel">
+                            <div class="panel-header control-group">
+                                <h2 class="panel-title control control-fill">Simple Panel</h2>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">settings</span>
+                                </a>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">settings</span>
+                                </a>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">settings</span>
+                                </a>
                             </div>
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                        </div>
-                        <div class="panel-footer control-group">
-                            <a href="#" class="icon-button control"><span class="material-icons icon">thumb_up</span></a>
-                            <a href="#" class="icon-button control"><span class="material-icons icon">favorite</span></a>
-                            <span class="metadata control control-right">29 May 2016</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="column-4">
-                    <div class="panel">
-                        <div class="panel-header control-group">
-                            <h2 class="panel-title control control-fill">Simple Panel</h2>
-                            <a href="#" class="icon-button control"><span class="material-icons icon">settings</span></a>
-                            <a href="#" class="icon-button control"><span class="material-icons icon">settings</span></a>
-                            <a href="#" class="icon-button control"><span class="material-icons icon">settings</span></a>
-                        </div>
-                        <div class="panel-content">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                        </div>
-                        <div class="panel-footer control-group">
-                            <a href="#" class="icon-button control"><span class="material-icons icon">thumb_up</span></a>
-                            <a href="#" class="icon-button control"><span class="material-icons icon">favorite</span></a>
-                            <span class="metadata control control-right">29 May 2016</span>
+                            <div class="panel-content">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                            <div class="panel-footer control-group">
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">thumb_up</span>
+                                </a>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">favorite</span>
+                                </a>
+                                <span class="metadata control control-right">29 May 2016</span>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="column-4">
-                    <div class="panel">
-                        <div class="panel-header control-group">
-                            <h2 class="panel-title control control-fill">Simple Panel</h2>
-                            <a href="#" class="icon-button control"><span class="material-icons icon">settings</span></a>
-                            <a href="#" class="icon-button control"><span class="material-icons icon">settings</span></a>
-                            <a href="#" class="icon-button control"><span class="material-icons icon">settings</span></a>
-                        </div>
-                        <div class="panel-content">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </p>
-                        </div>
-                        <div class="panel-footer control-group">
-                            <a href="#" class="icon-button control"><span class="material-icons icon">thumb_up</span></a>
-                            <a href="#" class="icon-button control"><span class="material-icons icon">favorite</span></a>
-                            <span class="metadata control control-right">29 May 2016</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="column-4">
-                    <div class="panel">
-                        <div class="panel-header control-group">
-                            <h2 class="panel-title control control-fill">Simple Panel</h2>
-                            <a href="#" class="icon-button control"><span class="material-icons icon">settings</span></a>
-                        </div>
-                        <div class="panel-content">
-                            <div class="control-group">
-                                <div class="control">
+                    <div class="column-4">
+                        <div class="panel">
+                            <div class="panel-header control-group">
+                                <h2 class="panel-title control control-fill">Simple Panel</h2>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">settings</span>
+                                </a>
+                            </div>
+                            <div class="panel-content">
+                                <div class="header-block header-block-small">
                                     <img src="images/joe.jpg" alt="Joe" class="avatar">
-                                </div>
-                                <div class="header-block header-block-small control control-fill">
                                     <h2 class="title">Andrew Courtice</h2>
                                     <h3 class="subtitle">Applications Developer</h3>
                                 </div>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
                             </div>
+                            <div class="panel-footer control-group">
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">thumb_up</span>
+                                </a>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">favorite</span>
+                                </a>
+                                <span class="metadata control control-right">29 May 2016</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-4">
+                        <div class="panel">
+                            <div class="panel-header control-group">
+                                <h2 class="panel-title control control-fill">Simple Panel</h2>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">settings</span>
+                                </a>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">settings</span>
+                                </a>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">settings</span>
+                                </a>
+                            </div>
+                            <div class="panel-content">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                            <div class="panel-footer control-group">
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">thumb_up</span>
+                                </a>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">favorite</span>
+                                </a>
+                                <span class="metadata control control-right">29 May 2016</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column-6">
+                        <div class="panel">
+                            <div class="panel-header control-group">
+                                <h2 class="panel-title control control-fill">Simple Panel</h2>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">settings</span>
+                                </a>
+                            </div>
+                            <div class="panel-content">
+                                <div class="control-group">
+                                    <div class="control">
+                                        <img src="images/joe.jpg" alt="Joe" class="avatar">
+                                    </div>
+                                    <div class="header-block header-block-small control control-fill">
+                                        <h2 class="title">Andrew Courtice</h2>
+                                        <h3 class="subtitle">Applications Developer</h3>
+                                    </div>
+                                </div>
 
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </p>
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                            <div class="panel-footer control-group">
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">thumb_up</span>
+                                </a>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">favorite</span>
+                                </a>
+                                <span class="metadata control control-right">29 May 2016</span>
+                            </div>
                         </div>
-                        <div class="panel-footer control-group">
-                            <a href="#" class="icon-button control"><span class="material-icons icon">thumb_up</span></a>
-                            <a href="#" class="icon-button control"><span class="material-icons icon">favorite</span></a>
-                            <span class="metadata control control-right">29 May 2016</span>
+                    </div>
+                    <div class="column-6">
+                        <div class="panel">
+                            <div class="panel-header control-group">
+                                <h2 class="panel-title control control-fill">Simple Panel</h2>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">settings</span>
+                                </a>
+                            </div>
+                            <div class="panel-content">
+                                <div class="control-group">
+                                    <div class="control">
+                                        <img src="images/joe.jpg" alt="Joe" class="avatar">
+                                    </div>
+                                    <div class="header-block header-block-small control control-fill">
+                                        <h2 class="title">Andrew Courtice</h2>
+                                        <h3 class="subtitle">Applications Developer</h3>
+                                    </div>
+                                </div>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                            <div class="panel-footer">
+                                <textarea name="name" rows="3" placeholder="Type a comment..."></textarea>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="column-4">
-                    <div class="panel">
-                        <div class="panel-header control-group">
-                            <h2 class="panel-title control control-fill">Simple Panel</h2>
-                            <a href="#" class="icon-button control"><span class="material-icons icon">settings</span></a>
-                            <a href="#" class="icon-button control"><span class="material-icons icon">settings</span></a>
-                            <a href="#" class="icon-button control"><span class="material-icons icon">settings</span></a>
+                <div class="row">
+                    <div class="column-4">
+                        <div class="panel">
+                            <div class="panel-header control-group">
+                                <h2 class="panel-title control control-fill">Simple Panel</h2>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">settings</span>
+                                </a>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">settings</span>
+                                </a>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">settings</span>
+                                </a>
+                            </div>
+                            <div class="panel-content">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                            <div class="panel-footer control-group">
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">thumb_up</span>
+                                </a>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">favorite</span>
+                                </a>
+                                <span class="metadata control control-right">29 May 2016</span>
+                            </div>
                         </div>
-                        <div class="panel-content">
-                            <p>
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                            </p>
+                    </div>
+                    <div class="column-4">
+                        <div class="panel">
+                            <div class="panel-header control-group">
+                                <h2 class="panel-title control control-fill">Simple Panel</h2>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">settings</span>
+                                </a>
+                            </div>
+                            <div class="panel-content">
+                                <div class="control-group">
+                                    <div class="control">
+                                        <img src="images/joe.jpg" alt="Joe" class="avatar">
+                                    </div>
+                                    <div class="header-block header-block-small control control-fill">
+                                        <h2 class="title">Andrew Courtice</h2>
+                                        <h3 class="subtitle">Applications Developer</h3>
+                                    </div>
+                                </div>
+
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                            <div class="panel-footer control-group">
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">thumb_up</span>
+                                </a>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">favorite</span>
+                                </a>
+                                <span class="metadata control control-right">29 May 2016</span>
+                            </div>
                         </div>
-                        <div class="panel-footer control-group">
-                            <a href="#" class="button button-danger control"><span class="material-icons icon">thumb_up</span> Delete</a>
-                            <span class="metadata control control-right">29 May 2016</span>
+                    </div>
+                    <div class="column-4">
+                        <div class="panel">
+                            <div class="panel-header control-group">
+                                <h2 class="panel-title control control-fill">Simple Panel</h2>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">settings</span>
+                                </a>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">settings</span>
+                                </a>
+                                <a href="#" class="icon-button control">
+                                    <span class="material-icons icon">settings</span>
+                                </a>
+                            </div>
+                            <div class="panel-content">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                                </p>
+                            </div>
+                            <div class="panel-footer control-group">
+                                <a href="#" class="button button-danger control">
+                                    <span class="material-icons icon">thumb_up</span>
+                                    Delete</a>
+                                <span class="metadata control control-right">29 May 2016</span>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="column-12">
-                    <div class="table-wrapper">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>First Column</th>
-                                    <th>Second Column</th>
-                                    <th>Third Column</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>
-                                        <div class="toggle toggle-checkbox">
-                                            <input type="checkbox" id="check1" name="check1" value="">
-                                            <label for="check1"></label>
+                <div class="row">
+                    <div class="column-12">
+                        <div class="table-wrapper">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <div class="toggle toggle-checkbox">
+                                                <input type="checkbox" id="checkall" name="checkall" value="">
+                                                <label for="checkall"></label>
+                                            </div>
+                                            First Column
+                                        </th>
+                                        <th>
+                                            <div class="control-group">
+                                                <div class="control control-fill">
+                                                    Second Column
+                                                </div>
+                                                <div class="control">
+                                                    <div class="toggle toggle-switch">
+                                                        <input type="checkbox" id="switch1" name="switch1" value="">
+                                                        <label for="switch1"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </th>
+                                        <th>
+                                            <div class="control-group">
+                                                <div class="control control-fill">
+                                                    Second Column
+                                                </div>
+                                                <div class="input-icon input-icon-left control">
+                                                    <span class="material-icons icon">filter_list</span>
+                                                    <input type="text" name="name" value="" placeholder="Search...">
+                                                </div>
+                                            </div>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="toggle toggle-checkbox">
+                                                <input type="checkbox" id="check1" name="check1" value="">
+                                                <label for="check1"></label>
+                                            </div>
+                                            <span>Data 1</span>
+                                        </td>
+                                        <td>
+                                            <div class="control-group">
+                                                <div class="control control-fill">
+                                                    Second Column
+                                                </div>
+                                                <div class="control">
+                                                    <div class="toggle toggle-switch">
+                                                        <input type="checkbox" id="switch1" name="switch1" value="">
+                                                        <label for="switch1"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Data 3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="toggle toggle-checkbox">
+                                                <input type="checkbox" id="check2" name="check2" value="">
+                                                <label for="check2"></label>
+                                            </div>
+                                            Data 1
+                                        </td>
+                                        <td>
+                                            <div class="control-group">
+                                                <div class="control control-fill">
+                                                    Second Column
+                                                </div>
+                                                <div class="control">
+                                                    <div class="toggle toggle-switch">
+                                                        <input type="checkbox" id="switch1" name="switch1" value="">
+                                                        <label for="switch1"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Data 3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="toggle toggle-checkbox">
+                                                <input type="checkbox" id="check3" name="check3" value="">
+                                                <label for="check3"></label>
+                                            </div>
+                                            Data 1
+                                        </td>
+                                        <td>
+                                            <div class="control-group">
+                                                <div class="control control-fill">
+                                                    Second Column
+                                                </div>
+                                                <div class="control">
+                                                    <div class="toggle toggle-switch">
+                                                        <input type="checkbox" id="switch1" name="switch1" value="">
+                                                        <label for="switch1"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Data 3</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="toggle toggle-checkbox">
+                                                <input type="checkbox" id="check4" name="check4" value="">
+                                                <label for="check4"></label>
+                                            </div>
+                                            Data 1
+                                        </td>
+                                        <td>
+                                            <div class="control-group">
+                                                <div class="control control-fill">
+                                                    Second Column
+                                                </div>
+                                                <div class="control">
+                                                    <div class="toggle toggle-switch">
+                                                        <input type="checkbox" id="switch1" name="switch1" value="">
+                                                        <label for="switch1"></label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td>Data 3</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column-6">
+                        <div class="panel">
+                            <div class="panel-header">
+                                <h2 class="panel-title">Lists</h2>
+                            </div>
+                            <div class="panel-content bleed-all">
+                                <ul class="list list-highlight">
+                                    <li class="list-item">
+                                        <div class="control-group">
+                                            <div class="control">
+                                                <img src="images/joe.jpg" alt="Joe" class="avatar">
+                                            </div>
+                                            <div class="header-block header-block-small control control-fill">
+                                                <h2 class="title">Andrew Courtice</h2>
+                                                <h3 class="subtitle">Applications Developer</h3>
+                                            </div>
+                                            <div class="control">
+                                                <span class="metadata">29 May 2016</span>
+                                            </div>
                                         </div>
-                                        <span>Data 1</span>
-                                    </td>
-                                    <td>Data 2</td>
-                                    <td>Data 3</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="toggle toggle-checkbox">
-                                            <input type="checkbox" id="check2" name="check2" value="">
-                                            <label for="check2"></label>
+                                        <div>
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                            </p>
                                         </div>
-                                        Data 1
-                                    </td>
-                                    <td>Data 2</td>
-                                    <td>Data 3</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="toggle toggle-checkbox">
-                                            <input type="checkbox" id="check3" name="check3" value="">
-                                            <label for="check3"></label>
+                                        <div>
+                                            <p>
+                                                <span class="label label-success">Success</span>
+                                                <span class="label label-warning">Warning</span>
+                                                <span class="label label-danger">Danger</span>
+                                            </p>
                                         </div>
-                                        Data 1
-                                    </td>
-                                    <td>Data 2</td>
-                                    <td>Data 3</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <div class="toggle toggle-checkbox">
-                                            <input type="checkbox" id="check4" name="check4" value="">
-                                            <label for="check4"></label>
+                                    </li>
+                                    <li class="list-item">
+                                        <div class="control-group">
+                                            <div class="control">
+                                                <img src="images/joe.jpg" alt="Joe" class="avatar">
+                                            </div>
+                                            <div class="header-block header-block-small control control-fill">
+                                                <h2 class="title">Andrew Courtice</h2>
+                                                <h3 class="subtitle">Applications Developer</h3>
+                                            </div>
+                                            <div class="control">
+                                                <span class="metadata">29 May 2016</span>
+                                            </div>
                                         </div>
-                                        Data 1
-                                    </td>
-                                    <td>Data 2</td>
-                                    <td>Data 3</td>
-                                </tr>
-                            </tbody>
-                        </table>
+                                        <div class="">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                                <a href="#">incididunt</a>
+                                                ut labore et dolore magna aliqua
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li class="list-item">
+                                        <div class="control-group">
+                                            <div class="control">
+                                                <img src="images/joe.jpg" alt="Joe" class="avatar">
+                                            </div>
+                                            <div class="header-block header-block-small control control-fill">
+                                                <h2 class="title">Andrew Courtice</h2>
+                                                <h3 class="subtitle">Applications Developer</h3>
+                                            </div>
+                                            <div class="control">
+                                                <span class="metadata">29 May 2016</span>
+                                            </div>
+                                        </div>
+                                        <div class="">
+                                            <p>
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
+                                            </p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column-6">
+                        <div class="panel">
+                            <div class="panel-header">
+                                <h2 class="panel-title">Tables</h2>
+                            </div>
+                            <div class="panel-content bleed-all">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Column Name</th>
+                                            <th>Column Name</th>
+                                            <th>Column Name</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Data</td>
+                                            <td>Data</td>
+                                            <td>Data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Data</td>
+                                            <td>Data</td>
+                                            <td>Data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Data</td>
+                                            <td>Data</td>
+                                            <td>Data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Data</td>
+                                            <td>Data</td>
+                                            <td>Data</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Data</td>
+                                            <td>Data</td>
+                                            <td>Data
+                                                <span class="label label-danger">Unknown</span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="panel-footer">
+                                <div class="input-icon input-icon-left">
+                                    <span class="material-icons icon">filter_list</span>
+                                    <input type="text" name="name" value="" placeholder="Filter data...">
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</body>
+    </body>
 
 </html>

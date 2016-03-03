@@ -38,7 +38,11 @@
 }
 
 @for $i from 1 through $grid_columns {
-    .column-#{$i} {
+    .column-#{ $i } {
         width: 100% / $grid_columns * $i;
+    }
+
+    .column-offset-#{ $i } {
+        margin-left: 100% / $grid_columns * $i;
     }
 }

@@ -13,6 +13,20 @@
     border: 1px solid $colour_Border;
 }
 
+.bleed-horizontal {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.bleed-vertical {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.bleed-all {
+    padding: 0 !important;
+}
+
 .drop-shadow {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
 }
