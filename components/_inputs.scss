@@ -1,7 +1,7 @@
 
 @import "_variables.scss";
 
-#{ $text_inputs },
+#{ $text_Inputs },
 select,
 textarea {
     width: 100%;
@@ -34,7 +34,7 @@ textarea {
     }
 }
 
-#{ $text_inputs },
+#{ $text_Inputs },
 select {
     height: 42px;
 }
@@ -63,7 +63,7 @@ input[type="radio"] {
 
     & + label {
         display: inline-block;
-        margin: 0;
+        margin: 0 15px 0 0;
         cursor: pointer;
         -webkit-user-select: none;
         user-select: none;
@@ -231,20 +231,18 @@ input[type="radio"] {
 .input-icon {
     position: relative;
     width: 100%;
-    height: 42px;
 
-    & #{ $text_inputs },
+    & #{ $text_Inputs },
     & select {
-        position: absolute;
+        position: relative;;
         top: 0;
-        left: 0;
     }
 }
 
 .input-loadable,
 .input-icon {
 
-    & #{ $text_inputs },
+    & #{ $text_Inputs },
     & select {
         padding-right: 42px;
         z-index: 1;
@@ -265,7 +263,7 @@ input[type="radio"] {
 
     &.input-loadable-left {
 
-        & #{ $text_inputs },
+        & #{ $text_Inputs },
         & select {
             padding-left: 42px;
             padding-right: 12px;
@@ -300,7 +298,7 @@ input[type="radio"] {
 
     &.input-icon-left {
 
-        & #{ $text_inputs },
+        & #{ $text_Inputs },
         & select {
             padding-left: 42px;
             padding-right: 12px;

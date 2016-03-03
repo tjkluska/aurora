@@ -1,0 +1,26 @@
+
+@import "_variables.scss";
+
+.typeahead {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+    & #{ $text_Inputs },
+    & .input-icon,
+    & .input-loadable {
+        position: relative;
+        top: 0;
+    }
+}
+
+.typeahead-results {
+    display: block;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    min-height: 22px;
+    max-height: 350px;
+    overflow-y: auto;
+}

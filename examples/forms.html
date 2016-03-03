@@ -81,143 +81,145 @@
                 </div>
             </header>
             <div class="container">
-                <form class="" action="index.html" method="post">
-                    <fieldset>
-                        <legend>Personal Information</legend>
-                        <div class="row">
-                            <div class="column-4">
-                                <label for="">Field 1</label>
-                                <input type="text" name="name" value="" placeholder="Your name" required>
-                                <span class="validation-message">Field 1 is required!</span>
-                            </div>
-                            <div class="column-4">
-                                <label for="">Field 2</label>
-                                <select name="" id="">
-                                    <option value="andrew1">andrew</option>
-                                    <option value="andrew2">andrew</option>
-                                    <option value="andrew3">andrew</option>
-                                </select>
-                            </div>
-                            <div class="column-4">
-                                <label for="">Field 3</label>
-                                <input type="email" name="name" value="" placeholder="info@something.com">
-                            </div>
+                <h2>Standard Fields</h2>
+                <div class="row">
+                    <div class="column-4">
+                        <label for="">Text Field</label>
+                        <input type="text" name="name" value="">
+                    </div>
+                    <div class="column-4">
+                        <label for="">Email Field</label>
+                        <input type="email" name="name" value="">
+                    </div>
+                    <div class="column-4">
+                        <label for="">Select Field</label>
+                        <select name="" id="">
+                            <option value="andrew1">andrew</option>
+                            <option value="andrew2">andrew</option>
+                            <option value="andrew3">andrew</option>
+                        </select>
+                    </div>
+                </div>
+                <h2>Disabled Fields</h2>
+                <div class="row">
+                    <div class="column-4">
+                        <label for="">Text Field</label>
+                        <input type="text" name="name" value="" disabled>
+                    </div>
+                    <div class="column-4">
+                        <label for="">Email Field</label>
+                        <input type="email" name="name" value="" disabled>
+                    </div>
+                    <div class="column-4">
+                        <label for="">Select Field</label>
+                        <select name="" id="" disabled>
+                            <option value="andrew1">andrew</option>
+                            <option value="andrew2">andrew</option>
+                            <option value="andrew3">andrew</option>
+                        </select>
+                    </div>
+                </div>
+                <h2>Validation</h2>
+                <div class="row">
+                    <div class="column-4">
+                        <label for="">Text Field</label>
+                        <input type="text" name="name" value="" required>
+                        <span class="validation-message">Text Field is required!</span>
+                    </div>
+                    <div class="column-4">
+                        <label for="">Email Field</label>
+                        <input type="email" name="name" value="" required>
+                        <span class="validation-message">Email Field is required and must be a valid email address!</span>
+                    </div>
+                    <div class="column-4">
+                        <label for="">Select Field</label>
+                        <select name="" id="" required>
+                            <option value="andrew1">andrew</option>
+                            <option value="andrew2">andrew</option>
+                            <option value="andrew3">andrew</option>
+                        </select>
+                        <span class="validation-message">Select Field is required!</span>
+                    </div>
+                </div>
+                <h2>Toggle Inputs</h2>
+                <div class="row">
+                    <div class="column-4">
+                        <div class="toggle toggle-switch">
+                            <input type="checkbox" id="switch1" name="switch1" value="">
+                            <label for="switch1"></label>
                         </div>
-                    </fieldset>
-                    <fieldset>
-                        <legend>Other Details</legend>
-                        <div class="row">
-                            <div class="column-4">
-                                <label for="">Field 1</label>
-                                <input type="text" name="name" value="" placeholder="Your name" required>
-                            </div>
-                            <div class="column-4">
-                                <label for="">Field 2</label>
-                                <select name="" id="">
-                                    <option value="andrew1">andrew</option>
-                                    <option value="andrew2">andrew</option>
-                                    <option value="andrew3">andrew</option>
-                                </select>
-                            </div>
-                            <div class="column-4">
-                                <label for="">Field 3</label>
-                                <input type="email" name="name" value="" placeholder="info@something.com">
-                            </div>
+                        <label for="switch1">Toggle Switch</label>
+                    </div>
+                    <div class="column-4">
+                        <div class="toggle toggle-checkbox">
+                            <input type="checkbox" id="check1" name="check1" value="">
+                            <label for="check1"></label>
                         </div>
-                        <div class="row">
-                            <div class="column-4">
-                                <label for="">Field 1</label>
-                                <input type="text" name="name" value="" placeholder="Your name" disabled>
-                            </div>
-                            <div class="column-4">
-                                <label for="">Field 2</label>
-                                <select name="" id="" disabled>
-                                    <option value="andrew1">andrew</option>
-                                    <option value="andrew2">andrew</option>
-                                    <option value="andrew3">andrew</option>
-                                </select>
-                            </div>
-                            <div class="column-4">
-                                <label for="">Field 3</label>
-                                <input type="email" name="name" value="" placeholder="info@something.com">
-                            </div>
+                        <label for="check1">Checkbox</label>
+                    </div>
+                    <div class="column-4">
+                        <div class="toggle toggle-radio">
+                            <input type="radio" id="radio1" name="radio" value="Yes">
+                            <label for="radio1"></label>
                         </div>
-                        <div class="row">
-                            <div class="column-4">
-                                <div class="toggle toggle-switch">
-                                    <input type="checkbox" id="switch1" name="switch1" value="">
-                                    <label for="switch1"></label>
-                                </div>
-                                <label for="switch1">Some Value</label>
-                            </div>
-                            <div class="column-4">
-                                <div class="toggle toggle-checkbox">
-                                    <input type="checkbox" id="check1" name="check1" value="">
-                                    <label for="check1"></label>
-                                </div>
-                                <label for="check1">Some Value</label>
-                            </div>
-                            <div class="column-4">
-                                <div class="toggle toggle-radio">
-                                    <input type="radio" id="radio1" name="radio1" value="">
-                                    <label for="radio1"></label>
-                                </div>
-                                <label for="radio1">Some Value</label>
-                                <div class="toggle toggle-radio">
-                                    <input type="radio" id="radio2" name="radio2" value="">
-                                    <label for="radio2"></label>
-                                </div>
-                                <label for="radio2">Some Value</label>
-                            </div>
+                        <label for="radio1">Radio</label>
+                        <div class="toggle toggle-radio">
+                            <input type="radio" id="radio2" name="radio" value="No">
+                            <label for="radio2"></label>
                         </div>
-                        <div class="row">
-                            <div class="column-4">
-                                <label for="">Loadable Input</label>
-                                <div class="input-loadable">
-                                    <input type="text" name="name" value="">
-                                    <div class="loader loader-loading"></div>
-                                </div>
-                            </div>
-                            <div class="column-4">
-                                <label for="">Icon Input Left</label>
-                                <div class="input-icon input-icon-left">
-                                    <span class="material-icons icon">thumb_up</span>
-                                    <input type="text" name="name" value="">
-                                </div>
-                            </div>
-                            <div class="column-4">
-                                <label for="">Icon Input Right</label>
-                                <div class="input-icon">
-                                    <input type="text" name="name" value="">
-                                    <span class="material-icons icon">thumb_up</span>
-                                </div>
-                            </div>
+                        <label for="radio2">Radio</label>
+                    </div>
+                </div>
+                <h2>Icon Inputs</h2>
+                <div class="row">
+                    <div class="column-4">
+                        <label for="">Icon Input Left</label>
+                        <div class="input-icon input-icon-left">
+                            <span class="material-icons icon">thumb_up</span>
+                            <input type="text" name="name" value="">
                         </div>
-                        <div class="row">
-                            <div class="column-4">
-                                <label for="">Loadable Input</label>
-                                <div class="input-loadable input-loadable-left">
-                                    <input type="text" name="name" value="">
-                                    <div class="loader loader-loading"></div>
-                                </div>
-                            </div>
-                            <div class="column-4">
-                                <label for="">Icon Input Left</label>
-                                <div class="input-icon input-icon-left">
-                                    <span class="material-icons icon">thumb_up</span>
-                                    <input type="text" name="name" value="">
-                                </div>
-                            </div>
-                            <div class="column-4">
-                                <label for="">Icon Input Right</label>
-                                <div class="input-icon">
-                                    <input type="text" name="name" value="">
-                                    <span class="material-icons icon">thumb_up</span>
-                                </div>
-                            </div>
+                    </div>
+                    <div class="column-4">
+                        <label for="">Icon Input Right</label>
+                        <div class="input-icon">
+                            <span class="material-icons icon">thumb_up</span>
+                            <input type="text" name="name" value="">
                         </div>
-                    </fieldset>
-                </form>
+                    </div>
+                </div>
+                <h2>Loadable Inputs</h2>
+                <div class="row">
+                    <div class="column-4">
+                        <label for="">Loadable Input Left</label>
+                        <div class="input-loadable input-loadable-left">
+                            <input type="text" name="name" value="">
+                            <div class="loader loader-loading"></div>
+                        </div>
+                    </div>
+                    <div class="column-4">
+                        <label for="">Loadable Input Right</label>
+                        <div class="input-loadable">
+                            <input type="text" name="name" value="">
+                            <div class="loader loader-loading"></div>
+                        </div>
+                    </div>
+                </div>
+                <h2>Typeahead</h2>
+                <div class="row">
+                    <div class="column-4">
+                        <label for="">Loadable Input Left</label>
+                        <div class="typeahead">
+                            <input type="text" name="name" value="">
+                        </div>
+                    </div>
+                    <div class="column-4">
+                        <label for="">Loadable Input Right</label>
+                        <div class="input-loadable">
+                            <input type="text" name="name" value="">
+                            <div class="loader loader-loading"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
