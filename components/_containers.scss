@@ -3,9 +3,9 @@
 @import "_mixins.scss";
 
 .container {
-    width: 1075px;
+    width: $layout_containerWidth;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 15px;
 
     &.container-fluid {
         width: 100%;
@@ -99,7 +99,7 @@
 }
 
 
-@media screen and (max-width: 1325px) {
+@media screen and (max-width: #{ $layout_sidebarWidth + $layout_containerWidth + $layout_scrollbarWidth }) {
 
     .layout-horizontal {
 
@@ -110,7 +110,7 @@
 
 }
 
-@media screen and (max-width: 1075px) {
+@media screen and (max-width: #{ $layout_containerWidth + $layout_scrollbarWidth }) {
 
     .container {
         width: 100%;

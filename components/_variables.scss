@@ -1,4 +1,8 @@
 
+$layout_scrollbarWidth: 17px;
+$layout_containerWidth: 1160px;
+$layout_sidebarWidth: 280px;
+
 $grid_columns: 12;
 
 $font_Size: 14px;
@@ -27,3 +31,5 @@ $colour_Border: #dddddd;
 $colour_BorderLight: #eeeeee;
 
 $border_Radius: 2px;
+
+$text_inputs: 'input:not([type="submit"]):not([type="checkbox"]):not([type="radio"])';

@@ -55,9 +55,7 @@ th,
         background-color: $colour_Background;
     }
 
-    & input:not([type="submit"]),
-    & input:not([type="checkbox"]),
-    & input:not([type="radio"]),
+    & #{ $text_inputs },
     & select,
     & .input-icon,
     & .input-loadable {
