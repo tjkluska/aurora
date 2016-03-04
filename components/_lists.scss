@@ -6,6 +6,13 @@
     padding: 0;
     list-style: none;
 
+    &.list-compact {
+
+        & .list-item {
+            padding: 10px 15px;
+        }
+    }
+
     &.list-highlight {
 
         & .list-item {
@@ -23,4 +30,24 @@
 
 .list-item {
     padding: 15px;
+}
+
+.list-item-title,
+.list-item-subtitle {
+    display: block;
+    margin: 0;
+    font-size: $font_Size;
+    font-weight: 600;
+}
+
+.list-item-title {
+    color: $colour_FontDark;
+}
+
+.list-item-subtitle {
+    color: $colour_FontLight;
+}
+
+.list-item-content {
+    margin: 15px 0 0 0;
 }

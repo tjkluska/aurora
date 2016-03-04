@@ -22,5 +22,19 @@
     width: 100%;
     min-height: 22px;
     max-height: 350px;
+    margin-top: 5px;
+    background-color: $colour_Background;
+    border: 1px solid $colour_Border;
+    border-radius: $border_Radius;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
     overflow-y: auto;
+}
+
+.typeahead-result {
+    padding: 5px 15px;
+    cursor: pointer;
+    
+    &:hover {
+        background-color: $colour_BackgroundStripe;
+    }
 }

@@ -1,0 +1,147 @@
+
+@import "_variables.scss";
+
+.calendar {
+    display: inline-block;
+    width: 250px;
+    background-color: $colour_Background;
+    border: 1px solid $colour_Border;
+    border-radius: $border_Radius;
+
+    &.calendar-large {
+        width: 100%;
+
+        & .calendar-weekdays {
+
+            & .calendar-day {
+                padding: 10px;
+                font-size: 18px;
+            }
+        }
+
+        & .calendar-week {
+
+            & .calendar-day {
+                height: 96px;
+                padding: 10px;
+            }
+        }
+    }
+}
+
+.calendar-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: $colour_BackgroundHeader;
+    border-bottom: 1px solid $colour_Border;
+}
+
+.calendar-previous,
+.calendar-next {
+    flex-grow: 0;
+    display: block;
+}
+
+.calendar-previous {
+    order: 0;
+}
+
+.calendar-current-block {
+    order: 1;
+    width: 100%;
+    text-align: center;
+}
+
+.calendar-current-month,
+.calendar-current-year {
+    display: block;
+    line-height: 1.25;
+}
+
+.calendar-current-month {
+    font-weight: 600;
+    color: $colour_FontDark;
+}
+
+.calendar-current-year {
+    font-weight: 600;
+    color: $colour_FontLight;
+}
+
+.calendar-next {
+    order: 2;
+}
+
+.calendar-content {
+    display: table;
+    width: 100%;
+    min-height: 36px;
+}
+
+.calendar-day {
+    display: table-cell;
+    width: (100% / 7);
+    padding: 3px;
+    text-align: center;
+
+    &.calendar-weekend {
+        background-color: $colour_BackgroundStripe;
+    }
+
+    &.calendar-not-current {
+        color: $colour_FontLight;
+    }
+}
+
+.calendar-day-number {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: right;
+}
+
+.calendar-weekdays {
+    display: table-header-group;
+
+    & .calendar-day {
+        font-weight: 600;
+        color: $colour_FontDark;
+        background-color: $colour_BackgroundStripe;
+        border-bottom: 1px solid $colour_Border;
+
+        &:not(:last-child) {
+            border-right: 1px solid $colour_Border;
+        }
+    }
+}
+
+.calendar-days {
+    display: table-row-group;
+}
+
+.calendar-week {
+    display: table-row;
+
+    &:not(:last-child) {
+
+        & .calendar-day {
+            border-bottom: 1px solid $colour_BorderLight;
+        }
+    }
+
+    & .calendar-day {
+        &:not(:last-child) {
+            border-right: 1px solid $colour_BorderLight;
+        }
+    }
+}
+
+.calendar-footer {
+    padding: 10px 15px;
+    background-color: $colour_BackgroundHeader;
+    border-top: 1px solid $colour_Border;
+}
