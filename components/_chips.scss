@@ -22,7 +22,7 @@
     vertical-align: middle;
 
     &.chip-removable {
-        padding-right: 45px;
+        padding-right: 48px;
     }
 
     &.chip-accent,
@@ -48,42 +48,77 @@
     &.chip-accent {
         background-color: $colour_Accent;
         border-color: $colour_Accent;
+
+        & .chip-remove-button {
+
+            &:hover {
+                background-color: $colour_AccentDark;
+            }
+        }
     }
 
     &.chip-business {
         background-color: $colour_Business;
         border-color: $colour_Business;
+
+        & .chip-remove-button {
+
+            &:hover {
+                background-color: $colour_BusinessDark;
+            }
+        }
     }
 
     &.chip-danger {
         background-color: $colour_Danger;
         border-color: $colour_Danger;
+
+        & .chip-remove-button {
+
+            &:hover {
+                background-color: $colour_DangerDark;
+            }
+        }
     }
 
     &.chip-warning {
         background-color: $colour_Warning;
         border-color: $colour_Warning;
+
+        & .chip-remove-button {
+
+            &:hover {
+                background-color: $colour_WarningDark;
+            }
+        }
     }
 
     &.chip-success {
         background-color: $colour_Success;
         border-color: $colour_Success;
+
+        & .chip-remove-button {
+
+            &:hover {
+                background-color: $colour_SuccessDark;
+            }
+        }
     }
 }
 
 .chip-title,
 .chip-subtitle {
     display: block;
-    font-weight: 600;
+    font-size: $font_Size;
 }
 
 .chip-title {
-    font-size: $font_Size;
+    font-weight: 600;
     color: $colour_FontDark;
 }
 
 .chip-subtitle {
-    font-size: $font_SizeSmall;
+    font-weight: 400;
     color: $colour_FontLight;
 }
 
@@ -91,10 +126,12 @@
     position: absolute;
     top: 50%;
     right: 15px;
-    width: 15px;
-    height: 15px;
-    margin-top: -7px;
+    width: 18px;
+    height: 18px;
+    margin-top: -9px;
     cursor: pointer;
+    border-radius: $border_Radius;
+    transition: background 150ms ease-out;
 
     &:before,
     &:after {
@@ -102,12 +139,14 @@
         position: absolute;
         content: " ";
         top: 50%;
-        left: 0;
-        width: 100%;
+        left: 50%;
+        width: 16px;
         height: 2px;
         margin-top: -1px;
+        margin-left: -8px;
         background-color: $colour_Font;
         transform-origin: center center;
+        transition: background 150ms ease-out;
     }
 
     &:before {
@@ -119,10 +158,11 @@
     }
 
     &:hover {
+        background-color: $colour_Accent;
 
         &:before,
         &:after {
-            background-color: $colour_FontDark;
+            background-color: $colour_FontInverted;
         }
     }
 }

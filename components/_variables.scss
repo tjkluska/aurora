@@ -2,14 +2,15 @@
 $layout_scrollbarWidth: 17px;
 $layout_containerWidth: 1160px;
 $layout_sidebarWidth: 280px;
+$layout_sidebarWidthLarge: 450px;
 
 $grid_columns: 12;
 
 $font_Size: 14px;
 $font_SizeSmall: 12px;
 
-$colour_Font: #80737c;
-$colour_FontLight: lighten($colour_Font, 15%);
+$colour_Font: #414550;
+$colour_FontLight: lighten($colour_Font, 20%);
 $colour_FontDark: darken($colour_Font, 15%);
 $colour_FontInverted: #ffffff;
 

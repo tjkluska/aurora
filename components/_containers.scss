@@ -117,23 +117,3 @@
                 flex-grow: 1;
     }
 }
-
-
-@media screen and (max-width: #{ $layout_sidebarWidth + $layout_containerWidth + $layout_scrollbarWidth }) {
-
-    .layout-horizontal {
-
-        .container {
-            width: 100%;
-        }
-    }
-
-}
-
-@media screen and (max-width: #{ $layout_containerWidth + $layout_scrollbarWidth }) {
-
-    .container {
-        width: 100%;
-    }
-
-}
