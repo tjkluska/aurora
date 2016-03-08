@@ -1,0 +1,128 @@
+
+@import "_variables.scss";
+
+.chips {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.chip {
+    display: inline-block;
+    position: relative;
+    margin: 5px 5px 5px 0;
+    padding: 5px 15px;
+    line-height: 1.5;
+    font-weight: 600;
+    color: $colour_FontDark;
+    background-color: $colour_BackgroundHeader;
+    border: 1px solid $colour_Border;
+    border-radius: $border_Radius;
+    vertical-align: middle;
+
+    &.chip-removable {
+        padding-right: 45px;
+    }
+
+    &.chip-accent,
+    &.chip-business,
+    &.chip-danger,
+    &.chip-warning,
+    &.chip-success {
+
+        & .chip-title,
+        & .chip-subtitle {
+            color: $colour_FontInverted;
+        }
+
+        & .chip-remove-button {
+
+            &:before,
+            &:after {
+                background-color: $colour_FontInverted;
+            }
+        }
+    }
+
+    &.chip-accent {
+        background-color: $colour_Accent;
+        border-color: $colour_Accent;
+    }
+
+    &.chip-business {
+        background-color: $colour_Business;
+        border-color: $colour_Business;
+    }
+
+    &.chip-danger {
+        background-color: $colour_Danger;
+        border-color: $colour_Danger;
+    }
+
+    &.chip-warning {
+        background-color: $colour_Warning;
+        border-color: $colour_Warning;
+    }
+
+    &.chip-success {
+        background-color: $colour_Success;
+        border-color: $colour_Success;
+    }
+}
+
+.chip-title,
+.chip-subtitle {
+    display: block;
+    font-weight: 600;
+}
+
+.chip-title {
+    font-size: $font_Size;
+    color: $colour_FontDark;
+}
+
+.chip-subtitle {
+    font-size: $font_SizeSmall;
+    color: $colour_FontLight;
+}
+
+.chip-remove-button {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    width: 15px;
+    height: 15px;
+    margin-top: -7px;
+    cursor: pointer;
+
+    &:before,
+    &:after {
+        display: block;
+        position: absolute;
+        content: " ";
+        top: 50%;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        margin-top: -1px;
+        background-color: $colour_Font;
+        transform-origin: center center;
+    }
+
+    &:before {
+        transform: rotate(-45deg);
+    }
+
+    &:after {
+        transform: rotate(45deg);
+    }
+
+    &:hover {
+
+        &:before,
+        &:after {
+            background-color: $colour_FontDark;
+        }
+    }
+}

@@ -2,8 +2,15 @@
 @import "_variables.scss";
 
 .layout {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 100%;
     min-height: 100%;
     height: 100%;
@@ -12,11 +19,19 @@
 }
 
 .layout-horizontal {
-    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
 }
 
 .layout-vertical {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
 }
 
 .sidebar,
@@ -27,10 +42,19 @@
 
 .sidebar,
 .navbar {
-    flex-grow: 0;
-    flex-shrink: 0;
-    order: 0;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    -webkit-box-ordinal-group: 1;
+    -webkit-order: 0;
+        -ms-flex-order: 0;
+            order: 0;
     background-color: $colour_BackgroundHeader;
+    z-index: 99;
 
     & .menu-item {
         position: relative;
@@ -42,7 +66,10 @@
             left: 0;
             background-color: $colour_Accent;
             opacity: 0;
+            -webkit-transition: opacity 150ms ease-out, -webkit-transform 150ms ease-out;
+            transition: opacity 150ms ease-out, -webkit-transform 150ms ease-out;
             transition: opacity 150ms ease-out, transform 150ms ease-out;
+            transition: opacity 150ms ease-out, transform 150ms ease-out, -webkit-transform 150ms ease-out;
         }
 
         &:hover,
@@ -62,7 +89,10 @@
     overflow-y: auto;
 
     &.sidebar-right {
-        order: 2;
+        -webkit-box-ordinal-group: 3;
+        -webkit-order: 2;
+            -ms-flex-order: 2;
+                order: 2;
     }
 
     & nav {
@@ -78,14 +108,16 @@
                 top: 0;
                 height: 100%;
                 width: 4px;
-                transform: scaleY(0);
+                -webkit-transform: scaleY(0);
+                        transform: scaleY(0);
             }
 
             &:hover,
             &.active {
 
                 &:after {
-                    transform: scaleY(1);
+                    -webkit-transform: scaleY(1);
+                            transform: scaleY(1);
                 }
             }
 
@@ -124,19 +156,22 @@
         & .menu-item {
             display: inline-block;
             padding: 15px 25px;
+            vertical-align: bottom;
 
             &:after {
                 bottom: 0;
                 height: 3px;
                 width: 100%;
-                transform: scaleX(0);
+                -webkit-transform: scaleX(0);
+                        transform: scaleX(0);
             }
 
             &:hover,
             &.active {
 
                 &:after {
-                    transform: scaleX(1);
+                    -webkit-transform: scaleX(1);
+                            transform: scaleX(1);
                 }
             }
         }
@@ -165,9 +200,17 @@ nav {
 }
 
 .content {
-    flex-grow: 1;
-    flex-shrink: 1;
-    order: 1;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+    -webkit-flex-shrink: 1;
+        -ms-flex-negative: 1;
+            flex-shrink: 1;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
     width: 100%;
     overflow: hidden;
     overflow-y: auto;

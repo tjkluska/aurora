@@ -14,6 +14,7 @@ textarea {
     border: 1px solid $colour_Border;
     border-radius: $border_Radius;
     outline: none;
+    -webkit-transition: border 150ms ease-out;
     transition: border 150ms ease-out;
 
     &:focus {
@@ -66,7 +67,9 @@ input[type="radio"] {
         margin: 0 15px 0 0;
         cursor: pointer;
         -webkit-user-select: none;
-        user-select: none;
+        -moz-user-select: none;
+         -ms-user-select: none;
+             user-select: none;
     }
 }
 
@@ -91,6 +94,7 @@ input[type="radio"] {
             left: 2px;
             background-color: $colour_FontLight;
             border-radius: 50%;
+            -webkit-transition: all 200ms ease-out;
             transition: all 200ms ease-out;
         }
     }
@@ -146,6 +150,7 @@ input[type="radio"] {
         left: 0;
         border: 1px solid $colour_Border;
         border-radius: $border_Radius;
+        -webkit-transition: border 150ms ease-out;
         transition: border 150ms ease-out;
 
         &:after {
@@ -158,8 +163,9 @@ input[type="radio"] {
             left: 5px;
             border-right: 3px solid transparent;
             border-bottom: 3px solid transparent;
-            border-bottom-right-radius: 3px;
-            transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+                    transform: rotate(45deg);
+            -webkit-transition: all 200ms ease-out;
             transition: all 200ms ease-out;
         }
 
@@ -194,6 +200,7 @@ input[type="radio"] {
     width: 18px;
     height: 18px;
     border-radius: 50%;
+    -webkit-transition: border 150ms ease-out;
     transition: border 150ms ease-out;
 
     & label {
@@ -203,6 +210,7 @@ input[type="radio"] {
         left: 3px;
         background-color: $colour_FontLight;
         border-radius: 50%;
+        -webkit-transition: all 200ms ease-out;
         transition: all 200ms ease-out;
     }
 
@@ -234,7 +242,7 @@ input[type="radio"] {
 
     & #{ $text_Inputs },
     & select {
-        position: relative;;
+        position: relative;
         top: 0;
     }
 }
@@ -276,15 +284,6 @@ input[type="radio"] {
     }
 }
 
-.input-group {
-    display: table;
-
-    & > * {
-        display: table-cell;
-        vertical-align: middle;
-    }
-}
-
 .input-icon {
 
     & .icon {
@@ -308,6 +307,46 @@ input[type="radio"] {
             left: 12px;
             right: auto;
         }
+    }
+}
+
+.input-chips {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    padding: 0 12px;
+    background-color: $colour_Background;
+    border: 1px solid $colour_Border;
+    border-radius: $border_Radius;
+
+    & .chips,
+    & #{ $text_Inputs },
+    & select,
+    & .input-icon,
+    & .input-loadable {
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    & #{ $text_Inputs },
+    & select,
+    & .input-icon,
+    & .input-loadable {
+        width: 150px;
+        height: auto;
+        padding: 5px;
+        background-color: transparent;
+        border: none;
+        border-radius: 0;
+    }
+}
+
+.input-group {
+    display: table;
+
+    & > * {
+        display: table-cell;
+        vertical-align: middle;
     }
 }
 

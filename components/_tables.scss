@@ -5,6 +5,17 @@
     background-color: $colour_Background;
     border: 1px solid $colour_Border;
     border-radius: $border_Radius;
+
+    &.table-wrapper-responsive {
+        max-width: 100%;
+        overflow-x: auto;
+
+        & table,
+        & .table {
+            table-layout: auto;
+            width: auto;
+        }
+    }
 }
 
 table,

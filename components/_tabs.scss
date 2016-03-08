@@ -41,8 +41,12 @@
         height: 3px;
         background-color: $colour_Accent;
         opacity: 0;
-        transform: scaleX(0);
+        -webkit-transform: scaleX(0);
+                transform: scaleX(0);
+        -webkit-transition: opacity 150ms ease-out, -webkit-transform 150ms ease-out;
+        transition: opacity 150ms ease-out, -webkit-transform 150ms ease-out;
         transition: opacity 150ms ease-out, transform 150ms ease-out;
+        transition: opacity 150ms ease-out, transform 150ms ease-out, -webkit-transform 150ms ease-out;
     }
 
     &:hover,
@@ -50,7 +54,8 @@
 
         &:after {
             opacity: 1;
-            transform: scaleX(1);
+            -webkit-transform: scaleX(1);
+                    transform: scaleX(1);
         }
     }
 

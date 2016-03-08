@@ -8,8 +8,90 @@
     border: 1px solid $colour_Border;
     border-radius: $border_Radius;
 
-    &.calendar-large {
+    &.calendar-fixed {
+
+        &.calendar-small {
+            width: 250px;
+        }
+
+        &.calendar-medium {
+            width: 480px;
+        }
+
+        &.calendar-large {
+            width: 640px;
+        }
+    }
+
+    &.calendar-dynamic {
         width: 100%;
+
+        &.calendar-small {
+
+            & .calendar-week {
+
+                & .calendar-day {
+                    height: 48px;
+                    padding: 10px;
+                }
+            }
+        }
+
+        &.calendar-medium {
+            width: 480px;
+
+            & .calendar-week {
+
+                & .calendar-day {
+                    height: 96px;
+                    padding: 10px;
+                }
+            }
+        }
+
+        &.calendar-large {
+
+            & .calendar-week {
+
+                & .calendar-day {
+                    height: 128px;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
+    &.calendar-medium,
+    &.calendar-large {
+
+        & .calendar-week {
+
+            &:not(:last-child) {
+
+                & .calendar-day {
+                    border-bottom: 1px solid $colour_BorderLight;
+                }
+            }
+
+            & .calendar-day {
+                &:not(:last-child) {
+                    border-right: 1px solid $colour_BorderLight;
+                }
+            }
+        }
+    }
+
+    &.calendar-large {
+
+        & .calendar-header {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        & .calendar-current-month,
+        & .calendar-current-year {
+            font-size: 22px;
+        }
 
         & .calendar-weekdays {
 
@@ -27,38 +109,93 @@
             }
         }
     }
+
+    &.calendar-accent {
+        border-color: $colour_Accent;
+
+        & .calendar-header,
+        & .calendar-footer {
+            background-color: $colour_Accent;
+
+            & .icon-button {
+                color: $colour_FontInverted;
+            }
+        }
+
+        & .calendar-current-month,
+        & .calendar-current-year {
+            color: $colour_FontInverted;
+        }
+
+        & .calendar-weekdays {
+
+            & .calendar-day {
+                color: $colour_FontInverted;
+                background-color: $colour_Accent;
+                border-color: $colour_Accent;
+            }
+        }
+
+        & .calendar-footer {
+            border-color: $colour_Accent;
+        }
+    }
 }
 
 .calendar-header {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+    -webkit-box-pack: start;
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
     padding: 10px 15px;
     background-color: $colour_BackgroundHeader;
-    border-bottom: 1px solid $colour_Border;
+    border-top-left-radius: $border_Radius;
+    border-top-right-radius: $border_Radius;
 }
 
 .calendar-previous,
 .calendar-next {
-    flex-grow: 0;
+    -webkit-box-flex: 0;
+    -webkit-flex-grow: 0;
+        -ms-flex-positive: 0;
+            flex-grow: 0;
     display: block;
 }
 
 .calendar-previous {
-    order: 0;
+    -webkit-box-ordinal-group: 1;
+    -webkit-order: 0;
+        -ms-flex-order: 0;
+            order: 0;
 }
 
 .calendar-current-block {
-    order: 1;
+    -webkit-box-ordinal-group: 2;
+    -webkit-order: 1;
+        -ms-flex-order: 1;
+            order: 1;
     width: 100%;
     text-align: center;
 }
 
 .calendar-current-month,
 .calendar-current-year {
-    display: block;
     line-height: 1.25;
 }
 
@@ -73,7 +210,10 @@
 }
 
 .calendar-next {
-    order: 2;
+    -webkit-box-ordinal-group: 3;
+    -webkit-order: 2;
+        -ms-flex-order: 2;
+            order: 2;
 }
 
 .calendar-content {
@@ -95,6 +235,12 @@
     &.calendar-not-current {
         color: $colour_FontLight;
     }
+
+    &.selected {
+        color: $colour_FontInverted;
+        background-color: $colour_Accent;
+        border-radius: $border_Radius;
+    }
 }
 
 .calendar-day-number {
@@ -109,13 +255,8 @@
 
     & .calendar-day {
         font-weight: 600;
-        color: $colour_FontDark;
-        background-color: $colour_BackgroundStripe;
+        background-color: $colour_BackgroundHeader;
         border-bottom: 1px solid $colour_Border;
-
-        &:not(:last-child) {
-            border-right: 1px solid $colour_Border;
-        }
     }
 }
 
@@ -125,23 +266,12 @@
 
 .calendar-week {
     display: table-row;
-
-    &:not(:last-child) {
-
-        & .calendar-day {
-            border-bottom: 1px solid $colour_BorderLight;
-        }
-    }
-
-    & .calendar-day {
-        &:not(:last-child) {
-            border-right: 1px solid $colour_BorderLight;
-        }
-    }
 }
 
 .calendar-footer {
     padding: 10px 15px;
     background-color: $colour_BackgroundHeader;
     border-top: 1px solid $colour_Border;
+    border-bottom-left-radius: $border_Radius;
+    border-bottom-right-radius: $border_Radius;
 }
