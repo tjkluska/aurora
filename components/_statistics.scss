@@ -1,0 +1,97 @@
+
+@import "_variables.scss";
+
+.statistic-group {
+    display: block;
+    margin: 0 -15px;
+
+    & .statistic {
+
+    }
+}
+
+.statistic {
+    display: inline-block;
+    margin: 15px;
+    padding: 5px 0;
+    vertical-align: bottom;
+
+    &.statistic-border-highlight {
+        padding-left: 10px;
+        border-left-width: 4px;
+        border-left-style: solid;
+    }
+
+    &.statistic-accent {
+        border-color: $colour_Accent;
+
+        & .statistic-value {
+            color: $colour_Accent;
+        }
+    }
+
+    &.statistic-business {
+        border-color: $colour_Business;
+
+        & .statistic-value {
+            color: $colour_Business;
+        }
+    }
+
+    &.statistic-danger {
+        border-color: $colour_Danger;
+
+        & .statistic-value {
+            color: $colour_Danger;
+        }
+    }
+
+    &.statistic-warning {
+        border-color: $colour_Warning;
+
+        & .statistic-value {
+            color: $colour_Warning;
+        }
+    }
+
+    &.statistic-success {
+        border-color: $colour_Success;
+
+        & .statistic-value {
+            color: $colour_Success;    
+        }
+    }
+}
+
+.statistic-value,
+.statistic-info-block {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.statistic-value {
+    margin-right: 5px;
+    font-size: round($font_SizeRoot * pow($font_TypographyRatio, 4));
+    font-weight: 600;
+    line-height: 1;
+    color: $colour_FontDark;
+}
+
+.statistic-info-block {
+
+}
+
+.statistic-title,
+.statistic-description {
+    display: block;
+    font-size: $font_SizeRoot;
+}
+
+.statistic-title {
+    font-weight: 600;
+    color: inherit;
+}
+
+.statistic-description {
+    color: $colour_FontLight;
+}
