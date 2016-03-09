@@ -16,6 +16,61 @@
     padding: 5px 0;
     vertical-align: bottom;
 
+    &.statistic-stacked {
+
+        & .statistic-value,
+        & .statistic-title,
+        & .statistic-description {
+            display: block;
+        }
+
+        & .statistic-value {
+            margin: 0 0 5px 0;
+        }
+    }
+
+    &.statistic-filled {
+        padding: 15px;
+        background-color: $colour_BackgroundHeader;
+        border: 1px solid $colour_Border;
+        border-radius: $border_Radius;
+
+        &.statistic-accent,
+        &.statistic-business,
+        &.statistic-danger,
+        &.statistic-warning,
+        &.statistic-success {
+            color: $colour_FontInverted;
+            border: none;
+
+            & .statistic-value,
+            & .statistic-title,
+            & .statistic-description {
+                color: $colour_FontInverted;
+            }
+        }
+
+        &.statistic-accent {
+            background-color: $colour_Accent;
+        }
+
+        &.statistic-business {
+            background-color: $colour_Business;
+        }
+
+        &.statistic-danger {
+            background-color: $colour_Danger;
+        }
+
+        &.statistic-warning {
+            background-color: $colour_Warning;
+        }
+
+        &.statistic-success {
+            background-color: $colour_Success;
+        }
+    }
+
     &.statistic-border-highlight {
         padding-left: 10px;
         border-left-width: 4px;
@@ -58,7 +113,7 @@
         border-color: $colour_Success;
 
         & .statistic-value {
-            color: $colour_Success;    
+            color: $colour_Success;
         }
     }
 }
