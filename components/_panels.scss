@@ -39,6 +39,11 @@
 
 .panel-content {
     padding: 15px;
+
+    & table,
+    & .table {
+        border: none;
+    }
 }
 
 .panel-title {

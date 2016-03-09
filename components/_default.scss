@@ -68,6 +68,11 @@ footer {
     background-color: $colour_BackgroundHeader;
 }
 
+ul,
+ol {
+    padding-left: 30px;
+}
+
 a {
     color: $colour_Accent;
     text-decoration: none;

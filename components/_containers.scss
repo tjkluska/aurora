@@ -14,8 +14,13 @@
 
 .hero {
     padding: 64px 0;
-    background-color: $colour_BackgroundStripe;
-    border-bottom: 1px solid $colour_Border;
+    background-color: $colour_BackgroundHeaderDark;
+    background-position: center center;
+    background-size: cover;
+
+    &.hero-large {
+        height: 500px;
+    }
 }
 
 .control-group {

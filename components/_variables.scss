@@ -13,9 +13,8 @@ $grid_columns: 12;
 
 /* Typography */
 $font_Family: "Open Sans", sans-serif;
-$font_TypograpghyRatio: 1.333;
+$font_TypographyRatio: 1.333;
 $font_SizeRoot: 14px;
-$font_SizeSmall: 12px;
 $font_LineHeight: 1.45;
 
 
@@ -38,6 +37,7 @@ $colour_SuccessDark: darken($colour_Success, 10%);
 
 $colour_Background: #ffffff;
 $colour_BackgroundHeader: #fafafc;
+$colour_BackgroundHeaderDark: darken($colour_BackgroundHeader, 2.5%);
 $colour_BackgroundStripe: #fdfdfd;
 
 $colour_Border: #dddddd;

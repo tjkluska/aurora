@@ -137,7 +137,7 @@
 }
 
 .sidebar-block {
-    padding: 0 20px;
+    padding: 0 15px;
 }
 
 .navbar {
@@ -220,26 +220,6 @@ nav {
     width: 100%;
     overflow: hidden;
     overflow-y: auto;
-}
-
-@media screen and (max-width: #{ $layout_sidebarWidth + $layout_sidebarWidthLarge + $layout_containerWidth + $layout_scrollbarWidth }) {
-
-    .layout-horizontal {
-
-        .sidebar {
-
-            & + .sidebar-large {
-
-                & + .content {
-
-                    & .container {
-                        width: 100%;
-                    }
-                }
-            }
-        }
-    }
-
 }
 
 @media screen and (max-width: #{ ($layout_sidebarWidth * 2) + $layout_containerWidth + $layout_scrollbarWidth }) {

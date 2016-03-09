@@ -16,19 +16,19 @@ h6 {
 
 h1 {
     margin-top: 0;
-    font-size: $font_SizeRoot * pow($font_TypograpghyRatio, 4);
+    font-size: round($font_SizeRoot * pow($font_TypographyRatio, 4));
 }
 
 h2 {
-    font-size: $font_SizeRoot * pow($font_TypograpghyRatio, 3);
+    font-size: round($font_SizeRoot * pow($font_TypographyRatio, 3));
 }
 
 h3 {
-    font-size: $font_SizeRoot * pow($font_TypograpghyRatio, 2);
+    font-size: round($font_SizeRoot * pow($font_TypographyRatio, 2));
 }
 
 h4 {
-    font-size: $font_SizeRoot * $font_TypograpghyRatio;
+    font-size: round($font_SizeRoot * $font_TypographyRatio);
 }
 
 h5 {
@@ -36,11 +36,51 @@ h5 {
 }
 
 h6 {
-    font-size: $font_SizeRoot * (1 / $font_TypograpghyRatio);
+    font-size: round($font_SizeRoot * (1 / $font_TypographyRatio));
 }
 
 p {
     margin: 0.75em 0;
+}
+
+small {
+    font-size: round($font_SizeRoot * (1 / $font_TypographyRatio));
+}
+
+.text-accent {
+    color: $colour_Accent;
+}
+
+.text-business {
+    color: $colour_Business;
+}
+
+.text-danger {
+    color: $colour_Danger;
+}
+
+.text-warning {
+    color: $colour_Warning;
+}
+
+.text-success {
+    color: $colour_Success;
+}
+
+.text-inverted {
+    color: $colour_FontInverted;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-centre {
+    text-align: center;;
+}
+
+.text-right {
+    text-align: right;
 }
 
 .clip-text {
@@ -59,6 +99,5 @@ p {
 }
 
 .metadata {
-    font-size: $font_SizeSmall;
     color: $colour_FontLight;
 }
