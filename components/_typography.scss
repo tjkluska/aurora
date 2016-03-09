@@ -1,5 +1,43 @@
 
 @import "_variables.scss";
+@import "_functions.scss";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0.75em 0;
+    line-height: $font_LineHeight;
+    font-weight: 600;
+    color: $colour_FontDark;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: $font_SizeRoot * pow($font_TypograpghyRatio, 4);
+}
+
+h2 {
+    font-size: $font_SizeRoot * pow($font_TypograpghyRatio, 3);
+}
+
+h3 {
+    font-size: $font_SizeRoot * pow($font_TypograpghyRatio, 2);
+}
+
+h4 {
+    font-size: $font_SizeRoot * $font_TypograpghyRatio;
+}
+
+h5 {
+    font-size: $font_SizeRoot;
+}
+
+h6 {
+    font-size: $font_SizeRoot * (1 / $font_TypograpghyRatio);
+}
 
 .clip-text {
     overflow: hidden;
@@ -7,8 +45,9 @@
     white-space: nowrap;
 }
 
-.title {
-    margin-top: 0;
+.title,
+.subtitle {
+    margin: 0;
 }
 
 .subtitle {

@@ -66,8 +66,8 @@
     border: 1px solid $colour_Border;
     border-radius: $border_Radius;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.15);
-    -webkit-transform-origin: top center;
-            transform-origin: top center;
+    -webkit-transform-origin: top left;
+            transform-origin: top left;
     z-index: 98;
 
     &.open {

@@ -16,6 +16,11 @@
             width: auto;
         }
     }
+
+    & table,
+    & .table {
+        border: none;
+    }
 }
 
 table,
@@ -23,7 +28,9 @@ table,
     display: table;
     table-layout: fixed;
     border-collapse: collapse;
+    border-spacing: 0;
     width: 100%;
+    border: 1px solid $colour_Border;
 }
 
 .table-striped {

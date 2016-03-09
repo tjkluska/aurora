@@ -8,6 +8,8 @@
         min-height: 22px;
         max-height: 350px;
         overflow-y: auto;
+        -webkit-transform-origin: top center;
+                transform-origin: top center;
     }
 
 }

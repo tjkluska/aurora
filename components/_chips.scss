@@ -13,8 +13,9 @@
     position: relative;
     margin: 5px 5px 5px 0;
     padding: 5px 15px;
-    line-height: 1.5;
+    font-size: $font_SizeRoot;
     font-weight: 600;
+    line-height: $font_LineHeight;
     color: $colour_FontDark;
     background-color: $colour_BackgroundHeader;
     border: 1px solid $colour_Border;
@@ -109,7 +110,7 @@
 .chip-title,
 .chip-subtitle {
     display: block;
-    font-size: $font_Size;
+    font-size: $font_SizeRoot;
 }
 
 .chip-title {

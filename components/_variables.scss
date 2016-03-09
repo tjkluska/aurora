@@ -1,14 +1,25 @@
 
+
+/* Layout */
 $layout_scrollbarWidth: 17px;
 $layout_containerWidth: 1160px;
 $layout_sidebarWidth: 280px;
 $layout_sidebarWidthLarge: 450px;
 
+
+/* Grid */
 $grid_columns: 12;
 
-$font_Size: 14px;
-$font_SizeSmall: 12px;
 
+/* Typography */
+$font_Family: "Open Sans", sans-serif;
+$font_TypograpghyRatio: 1.333;
+$font_SizeRoot: 14px;
+$font_SizeSmall: 12px;
+$font_LineHeight: 1.45;
+
+
+/* Colours */
 $colour_Font: #414550;
 $colour_FontLight: lighten($colour_Font, 20%);
 $colour_FontDark: darken($colour_Font, 15%);
@@ -32,6 +43,10 @@ $colour_BackgroundStripe: #fdfdfd;
 $colour_Border: #dddddd;
 $colour_BorderLight: #eeeeee;
 
+
+/* Borders */
 $border_Radius: 2px;
 
+
+/* Inputs */
 $text_Inputs: 'input:not([type="submit"]):not([type="checkbox"]):not([type="radio"])';

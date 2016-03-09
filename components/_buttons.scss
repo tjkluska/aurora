@@ -6,7 +6,9 @@
     margin: 0 5px;
     padding: 10px 25px;
     font-family: inherit;
+    font-size: $font_SizeRoot;
     font-weight: 600;
+    line-height: $font_LineHeight;
     color: $colour_FontInverted;
     background-color: $colour_Accent;
     outline: none;
