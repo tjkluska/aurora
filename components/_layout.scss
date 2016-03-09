@@ -35,12 +35,6 @@
 }
 
 .sidebar,
-.content {
-    padding-top: 48px;
-    padding-bottom: 48px;
-}
-
-.sidebar,
 .navbar {
     -webkit-box-flex: 0;
     -webkit-flex-grow: 0;
@@ -80,6 +74,11 @@
             }
         }
     }
+}
+
+.sidebar,
+.content {
+    padding-bottom: 64px;
 }
 
 .sidebar {
@@ -138,7 +137,6 @@
 }
 
 .sidebar-block {
-    margin-bottom: 64px;
     padding: 0 20px;
 }
 

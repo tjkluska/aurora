@@ -39,6 +39,10 @@ h6 {
     font-size: $font_SizeRoot * (1 / $font_TypograpghyRatio);
 }
 
+p {
+    margin: 0.75em 0;
+}
+
 .clip-text {
     overflow: hidden;
     text-overflow: ellipsis;

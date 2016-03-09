@@ -57,12 +57,13 @@ body {
     background-color: $colour_Background;
 }
 
-header {
-    margin-bottom: 64px;
+section,
+footer {
+    margin-top: 64px;
 }
 
 footer {
-    margin-top: 64px;
+    margin-bottom: 64px;
     padding: 36px 0;
     background-color: $colour_BackgroundHeader;
 }

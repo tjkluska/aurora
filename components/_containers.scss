@@ -12,6 +12,12 @@
     }
 }
 
+.hero {
+    padding: 64px 0;
+    background-color: $colour_BackgroundStripe;
+    border-bottom: 1px solid $colour_Border;
+}
+
 .control-group {
     display: -webkit-box;
     display: -webkit-flex;
