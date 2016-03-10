@@ -10,9 +10,15 @@
         content: "";
         display: table;
     }
-    
+
     &:after {
         clear: both;
     }
 
+}
+
+@mixin clipText {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

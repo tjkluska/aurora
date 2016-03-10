@@ -1,5 +1,6 @@
 
 @import "_variables.scss";
+@import "_mixins.scss";
 @import "_functions.scss";
 
 h1,
@@ -84,9 +85,7 @@ small {
 }
 
 .clip-text {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
+    @include clipText;
 }
 
 .title,

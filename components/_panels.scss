@@ -1,5 +1,6 @@
 
 @import "_variables.scss";
+@import "_mixins.scss";
 
 .panel {
     min-width: 80px;
@@ -47,10 +48,12 @@
 }
 
 .panel-title {
+    display: block;
     margin: 0;
     padding: 15px;
     font-size: $font_SizeRoot;
     font-weight: 600;
+    @include clipText;
 }
 
 .panel-footer {
