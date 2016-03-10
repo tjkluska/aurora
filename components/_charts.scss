@@ -1,0 +1,18 @@
+
+.chart {
+    display: block;
+    width: 100%;
+    height: 250px;
+
+    &.chart-small {
+        height: 180px;
+    }
+
+    &.chart-medium {
+        height: 450px;
+    }
+
+    &.chart-large {
+        height: 640px;
+    }
+}
