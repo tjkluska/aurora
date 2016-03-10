@@ -55,6 +55,7 @@ td,
     display: table-cell;
     padding: 8px 15px;
     text-align: left;
+    vertical-align: middle;
 
     &:not(:last-of-type) {
         border-right: 1px solid $colour_Border;

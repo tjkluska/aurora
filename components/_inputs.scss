@@ -48,11 +48,10 @@ input[type="radio"] {
 .toggle {
     display: inline-block;
     position: relative;
-    bottom: 1px;
     margin-right: 5px;
     background-color: $colour_BackgroundHeader;
     border: 1px solid $colour_Border;
-    vertical-align: middle;
+    vertical-align: text-bottom;
 
     & label {
         position: absolute;

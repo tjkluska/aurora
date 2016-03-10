@@ -1,0 +1,91 @@
+
+@import "_variables.scss";
+
+.treeview {
+    max-width: 100%;
+    padding: 10px 0;
+    overflow-x: auto;
+
+    &.treeview-show-indentation {
+
+        .treeview-node-list {
+
+            & .treeview-node-list {
+                border-left: 1px dotted $colour_BorderLight;
+            }
+        }
+    }
+}
+
+.treeview-node-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    & .treeview-node-list {
+        display: none;
+        margin: 10px 0 0 15px;
+    }
+
+    & .treeview-node {
+
+        &:last-child {
+            padding-bottom: 0;
+        }
+    }
+}
+
+.treeview-node {
+    padding: 0 15px 10px 15px;
+
+    &.expanded {
+
+        & .treeview-node-list {
+            display: block;
+        }
+    }
+}
+
+.treeview-node-expander,
+.treeview-node-label {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.treeview-node-expander {
+    display: inline-block;
+    position: relative;
+    width: 18px;
+    height: 18px;
+    margin-right: 5px;
+    background-color: $colour_FontLight;
+    border-radius: $border_Radius;
+    transition: background 150ms ease-out;
+
+    &:before,
+    &:after {
+        display: block;
+        position: absolute;
+        content: " ";
+        top: 50%;
+        left: 3px;
+        width: 12px;
+        height: 2px;
+        margin-top: -1px;
+        background-color: $colour_FontInverted;
+        transform-origin: center center;
+    }
+
+    &:after {
+        transform: rotate(90deg);
+    }
+
+    &:hover {
+        background-color: $colour_FontDark;
+    }
+}
+
+.treeview-node-label {
+    font-size: $font_SizeRoot;
+    font-weight: 600;
+}
