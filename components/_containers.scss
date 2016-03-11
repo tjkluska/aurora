@@ -12,11 +12,23 @@
     }
 }
 
+.box {
+
+    &.box-shaded {
+        background-color: $colour_BackgroundHeader;
+    }
+
+    &.box-padded {
+        padding: 15px;
+    }
+}
+
 .hero {
     padding: 64px 0;
-    background-color: $colour_BackgroundHeaderDark;
+    background-color: $colour_BackgroundStripe;
     background-position: center center;
     background-size: cover;
+    border-bottom: 1px solid $colour_Border;
 
     &.hero-large {
         height: 500px;

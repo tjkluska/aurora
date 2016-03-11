@@ -13,8 +13,9 @@ $grid_columns: 12;
 
 /* Typography */
 $font_Family: "Open Sans", sans-serif;
-$font_TypographyRatio: 1.333;
+$font_TypographyRatio: 1.25;
 $font_SizeRoot: 14px;
+$font_SizeMinor: round($font_SizeRoot * (1 / $font_TypographyRatio));
 $font_LineHeight: 1.45;
 
 

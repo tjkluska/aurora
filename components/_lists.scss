@@ -36,15 +36,17 @@
 .list-item-subtitle {
     display: block;
     margin: 0;
-    font-size: $font_SizeRoot;
 }
 
 .list-item-title {
+    font-size: $font_SizeRoot;
     font-weight: 600;
     color: $colour_FontDark;
 }
 
 .list-item-subtitle {
+    font-size: $font_SizeMinor;
+    font-weight: 400;
     color: $colour_FontLight;
 }
 

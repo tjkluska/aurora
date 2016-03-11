@@ -27,8 +27,24 @@
     border: none;
 }
 
-.border-all {
+.border-top {
+    border-top: 1px solid $colour_Border;
+}
+
+.border-right {
+    border-right: 1px solid $colour_Border;
+}
+
+.border-bottom {
+    border-bottom: 1px solid $colour_Border;
+}
+
+.border-left {
     border: 1px solid $colour_Border;
+}
+
+.border-all {
+    border-left: 1px solid $colour_Border;
 }
 
 .drop-shadow {

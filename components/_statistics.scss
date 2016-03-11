@@ -139,14 +139,15 @@
 .statistic-title,
 .statistic-description {
     display: block;
-    font-size: $font_SizeRoot;
 }
 
 .statistic-title {
+    font-size: $font_SizeRoot;
     font-weight: 600;
     color: inherit;
 }
 
 .statistic-description {
+    font-size: $font_SizeMinor;
     color: $colour_FontLight;
 }

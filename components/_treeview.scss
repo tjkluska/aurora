@@ -11,7 +11,7 @@
         .treeview-node-list {
 
             & .treeview-node-list {
-                border-left: 1px dotted $colour_BorderLight;
+                border-left: 1px dotted $colour_Border;
             }
         }
     }
@@ -24,7 +24,7 @@
 
     & .treeview-node-list {
         display: none;
-        margin: 10px 0 0 15px;
+        margin: 10px 0 0 9px;
     }
 
     & .treeview-node {

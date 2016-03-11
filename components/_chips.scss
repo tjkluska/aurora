@@ -110,15 +110,16 @@
 .chip-title,
 .chip-subtitle {
     display: block;
-    font-size: $font_SizeRoot;
 }
 
 .chip-title {
+    font-size: $font_SizeRoot;
     font-weight: 600;
     color: $colour_FontDark;
 }
 
 .chip-subtitle {
+    font-size: $font_SizeMinor;
     font-weight: 400;
     color: $colour_FontLight;
 }

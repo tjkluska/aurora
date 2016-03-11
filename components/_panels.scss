@@ -47,13 +47,22 @@
     }
 }
 
-.panel-title {
+.panel-title,
+.panel-description {
     display: block;
+}
+
+.panel-title {
     margin: 0;
     padding: 15px;
     font-size: $font_SizeRoot;
     font-weight: 600;
     @include clipText;
+}
+
+.panel-description {
+    font-size: $font_SizeMinor;
+    color: $colour_FontLight;
 }
 
 .panel-footer {
