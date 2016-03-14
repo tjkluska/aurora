@@ -149,10 +149,13 @@
                         Showing statistics for the current
                         <div class="dropdown-link">
                             <span id="dropdown-link">{{ selectedPeriod.value }}</span>
-                            <dropdown for="dropdown-link">
+                            <dropdown for="dropdown-link" v-bind:preserve-state.once="true">
+                                <div class="box box-padded">
+                                    <input type="text" name="name" v-model="periodFilter">
+                                </div>
                                 <div class="menu">
                                     <ul class="menu-list">
-                                        <li class="menu-item" v-for="period in periods" v-on:click="selectPeriod(period)">{{ period.value }}</li>
+                                        <li class="menu-item" v-for="period in periods | filterBy periodFilter" v-on:click="selectPeriod(period)">{{ period.value }}</li>
                                     </ul>
                                 </div>
                             </dropdown>
