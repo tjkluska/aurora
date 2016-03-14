@@ -1,6 +1,10 @@
 
 @import "_variables.scss";
 
+[v-cloak] {
+    display: none;
+}
+
 .no-margin {
     margin: 0;
 }

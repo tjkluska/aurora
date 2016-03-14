@@ -18,13 +18,46 @@
     </style>
 </head>
 
-<body class="layout layout-horizontal">
+<body id="dropdown-app" class="layout layout-horizontal">
+    <script type="text/x-template" id="dropdown-template">
+        <div class="dropdown" v-show="show" v-bind:class="{ 'dropdown-left': direction == 'left' }" transition="dropdown">
+            <slot>No dropdown content!</slot>
+        </div>
+    </script>
+
     <div class="sidebar">
         <section>
             <div class="sidebar-block">
                 <img src="images/joe.jpg" alt="Joe" class="avatar">
-                <h3 class="title">Andrew Courtice</h3>
-                <h5 class="subtitle">Applications Developer</h5>
+                <div class="control-group">
+                    <div class="control control-fill">
+                        <h3 class="title">Andrew Courtice</h3>
+                        <h5 class="subtitle">Applications Developer</h5>
+                    </div>
+                    <div class="button-group control">
+                        <a href="#" id="user-options" class="icon-button">
+                            <span class="material-icons icon icon-24">more_vert</span>
+                        </a>
+                        <dropdown for="user-options" direction="left">
+                            <div class="menu">
+                                <ul class="menu-list">
+                                    <li class="menu-item">
+                                        <div class="control-group">
+                                            <span class="material-icons icon control">settings</span>
+                                            <span class="control control-fill">Settings</span>
+                                        </div>
+                                    </li>
+                                    <li class="menu-item">
+                                        <div class="control-group">
+                                            <span class="material-icons icon control">forward</span>
+                                            <span class="control control-fill">Logout</span>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </dropdown>
+                    </div>
+                </div>
             </div>
         </section>
         <section>
@@ -113,33 +146,48 @@
             <section>
                 <div class="row">
                     <div class="column-12">
+                        Showing statistics for the current
+                        <div class="dropdown-link">
+                            <span id="dropdown-link">{{ selectedPeriod.value }}</span>
+                            <dropdown for="dropdown-link">
+                                <div class="menu">
+                                    <ul class="menu-list">
+                                        <li class="menu-item" v-for="period in periods" v-on:click="selectPeriod(period)">{{ period.value }}</li>
+                                    </ul>
+                                </div>
+                            </dropdown>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="column-12">
                         <div class="statistic-group">
                             <div class="statistic statistic-filled statistic-accent">
                                 <span class="statistic-value">58</span>
                                 <div class="statistic-info-block">
                                     <span class="statistic-title">Matters Settled</span>
-                                    <span class="statistic-description">This Week</span>
+                                    <span class="statistic-description">Current {{ selectedPeriod.value }}</span>
                                 </div>
                             </div>
                             <div class="statistic statistic-filled statistic-danger">
                                 <span class="statistic-value">58</span>
                                 <div class="statistic-info-block">
                                     <span class="statistic-title">Matters Settled</span>
-                                    <span class="statistic-description">This Week</span>
+                                    <span class="statistic-description">Current {{ selectedPeriod.value }}</span>
                                 </div>
                             </div>
                             <div class="statistic statistic-filled statistic-warning">
                                 <span class="statistic-value">58</span>
                                 <div class="statistic-info-block">
                                     <span class="statistic-title">Matters Settled</span>
-                                    <span class="statistic-description">This Week</span>
+                                    <span class="statistic-description">Current {{ selectedPeriod.value }}</span>
                                 </div>
                             </div>
                             <div class="statistic statistic-filled statistic-success">
                                 <span class="statistic-value">58</span>
                                 <div class="statistic-info-block">
                                     <span class="statistic-title">Matters Settled</span>
-                                    <span class="statistic-description">This Week</span>
+                                    <span class="statistic-description">Current {{ selectedPeriod.value }}</span>
                                 </div>
                             </div>
                         </div>
@@ -355,9 +403,38 @@
                                     <h3 class="panel-title">Simple Panel</h3>
                                     <span class="panel-description">This is a basic line chart displaying sample data</span>
                                 </div>
-                                <a href="#" class="icon-button control">
-                                    <span class="material-icons icon">settings</span>
-                                </a>
+                                <div class="button-group control">
+                                    <a href="#" id="panel-settings" class="icon-button">
+                                        <span class="material-icons icon">settings</span>
+                                    </a>
+                                    <dropdown for="panel-settings" direction="left">
+                                        <div class="menu">
+                                            <ul class="menu-list">
+                                                <li class="menu-item">
+                                                    <div class="control-group">
+                                                        <span class="material-icons icon control">home</span>
+                                                        <span class="control control-fill">Home</span>
+                                                        <span class="control metadata"><small>Ctrl+H</small></span>
+                                                    </div>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <div class="control-group">
+                                                        <span class="material-icons icon control">cloud</span>
+                                                        <span class="control control-fill">Repositories</span>
+                                                        <span class="control metadata"><small>Ctrl+H</small></span>
+                                                    </div>
+                                                </li>
+                                                <li class="menu-item">
+                                                    <div class="control-group">
+                                                        <span class="material-icons icon control">settings</span>
+                                                        <span class="control control-fill">Settings</span>
+                                                        <span class="control metadata"><small>Ctrl+H</small></span>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </dropdown>
+                                </div>
                             </div>
                             <div class="panel-content">
                                 <div>
@@ -573,6 +650,8 @@
             </section>
         </div>
     </div>
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/vue/1.0.17/vue.min.js"></script>
+    <script type="text/javascript" src="components/dropdown/dropdown.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
     <script type="text/javascript">
         var barLineData = {

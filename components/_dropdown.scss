@@ -1,11 +1,43 @@
 
 @import "_variables.scss";
 
+.dropdown-link {
+    display: inline-block;
+    position: relative;
+    font-weight: 600;
+    color: inherit;
+    padding-right: 1.2em;
+    cursor: pointer;
+
+    &:after {
+        display: block;
+        position: absolute;
+        content: " ";
+        top: 0.4em;
+        right: 0.25em;
+        width: 0.5em;
+        height: 0.5em;
+        background: none;
+        border-bottom: 2px solid $colour_Font;
+        border-right: 2px solid $colour_Font;
+        -webkit-transform: rotate(45deg);
+                transform: rotate(45deg);
+    }
+
+    &:hover {
+        color: $colour_FontDark;
+
+        &:after {
+            border-color: $colour_FontDark;
+        }
+    }
+}
+
 .dropdown {
     position: absolute;
-    top: 0;
+    top: 100%;
     left: 0;
-    min-width: 250px;
+    min-width: 150px;
     margin-top: 5px;
     background-color: $colour_Background;
     border: 1px solid $colour_Border;
@@ -14,10 +46,29 @@
     -webkit-transform-origin: top left;
             transform-origin: top left;
     z-index: 98;
+
+    &.dropdown-left {
+        left: auto;
+        right: 0;
+        -webkit-transform-origin: top right;
+                transform-origin: top right;
+    }
+
+    & .menu-item {
+        padding: 10px 15px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $colour_BackgroundHeaderDark;
+        }
+    }
 }
 
 .dropdown-transition {
+    -webkit-transition: opacity 100ms ease-out, -webkit-transform 100ms ease-out;
+    transition: opacity 100ms ease-out, -webkit-transform 100ms ease-out;
     transition: opacity 100ms ease-out, transform 100ms ease-out;
+    transition: opacity 100ms ease-out, transform 100ms ease-out, -webkit-transform 100ms ease-out;
     opacity: 1;
     -webkit-transform: translate(0, 0) scale(1);
     transform: translate(0, 0) scale(1);

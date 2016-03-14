@@ -109,3 +109,13 @@
         }
     }
 }
+
+.button-group {
+    display: inline-block;
+    position: relative;
+    margin-right: 5px;
+
+    & .button {
+        margin: 0;
+    }
+}

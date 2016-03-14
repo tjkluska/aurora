@@ -7,15 +7,15 @@
             for: {
                 type: String,
                 required: true
+            },
+            direction: {
+                type: String,
+                default: "right"
             }
         },
         data: function() {
             return {
-                show: false,
-                position: {
-                    top: 0,
-                    left: 0
-                }
+                show: false
             };
         },
         ready: function() {
@@ -32,15 +32,8 @@
             var show = function(event) {
                 event.preventDefault();
                 event.stopPropagation();
-                console.dir(event);
+
                 if (!_this.show) {
-                    var elementGeometry = element.getBoundingClientRect();
-
-                    _this.position = {
-                        top: elementGeometry.top + elementGeometry.height + "px",
-                        left: elementGeometry.left + "px"
-                    };
-
                     _this.show = true;
 
                     document.addEventListener("click", hide);
@@ -51,8 +44,27 @@
         }
     });
 
+    var periods = [
+        { id: 1, value: "Day" },
+        { id: 2, value: "Week" },
+        { id: 3, value: "Month" },
+        { id: 4, value: "Year" }
+    ];
+
     var app = new Vue({
-        el: "#dropdown-app"
+        el: "#dropdown-app",
+        data: {
+            periods: periods,
+            selectedPeriod: periods[0]
+        },
+        methods: {
+            menuClick: function(menuName) {
+                alert(menuName + " Clicked!");
+            },
+            selectPeriod: function(period) {
+                this.selectedPeriod = period;
+            }
+        }
     });
 
 })();
