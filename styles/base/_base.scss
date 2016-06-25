@@ -1,0 +1,63 @@
+@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: $fontSize;
+    box-sizing: border-box;
+}
+
+* {
+    box-sizing: inherit;
+
+    &:before,
+    &:after {
+        @extend *;
+    }
+}
+
+body {
+    font-family: $fontFamily;
+    font-weight: $fontWeight;
+    line-height: $fontLineHeight;
+    color: $colourFontSecondary;
+    background-color: $colourBackground;
+}
+
+::-webkit-scrollbar {
+    width: $layoutScrollbarWidth;
+
+    &:horizontal {
+        @include border(top);
+    }
+
+    &:vertical {
+        @include border(left);
+    }
+}
+
+::-webkit-scrollbar-thumb {
+    border: 4px solid transparent;
+    background-clip: padding-box;
+    border-radius: $layoutScrollbarWidth / 2;
+    background-color: $colourBorderDark;
+
+    &:hover {
+        background-color: $colourBorderDarker;
+    }
+}
+
+::-webkit-scrollbar-button {
+    display: none;
+}
+
+::-webkit-scrollbar-corner {
+    display: none;
+}

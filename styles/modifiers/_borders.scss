@@ -1,0 +1,23 @@
+@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
+
+.border-all {
+    @include border();
+}
+
+.border-top {
+    @include border(top);
+}
+
+.border-right {
+    @include border(right);
+}
+
+.border-bottom {
+    @include border(bottom);
+}
+
+.border-left {
+    @include border(left);
+}
+

@@ -1,0 +1,54 @@
+@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
+
+.menu-group {
+    margin-bottom: $layoutClearing;
+}
+
+.menu-group-header {
+    display: block;
+    margin-bottom: 1em;
+    color: $colourFontSecondaryLightest;
+    font-weight: $fontWeightHeavy;
+    font-size: $fontSizeXSmall;
+    text-transform: uppercase;
+}
+
+.menu {
+    display: block;
+    list-style: none;
+    @include bleed;
+}
+
+.menu-horizontal {
+
+    & .menu-item {
+        display: inline-block;
+        padding: $layoutPaddingSmall $layoutPaddingLarge;
+        vertical-align: bottom;
+    }
+}
+
+.menu-group-header,
+.menu-item {
+    padding-left: $layoutPaddingMedium;
+    padding-right: $layoutPaddingMedium;
+}
+
+.menu-item {
+    display: block;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: $colourFontSecondary;
+    font-weight: $fontWeightHeavy;
+    cursor: pointer;
+
+    &:hover,
+    &.active {
+        color: $colourFont;
+    }
+
+    & .icon {
+        margin-right: 1em;
+    }
+}

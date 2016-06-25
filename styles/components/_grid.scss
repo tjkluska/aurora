@@ -1,0 +1,41 @@
+@import "../abstracts/_variables.scss";
+
+.grid {
+    margin-left: -$layoutPaddingMedium;
+    margin-right: -$layoutPaddingMedium;
+
+    & .grid-cell {
+        padding-left: $layoutPaddingMedium;
+        padding-right: $layoutPaddingMedium; 
+    }
+
+    &.no-padding {
+        margin-left: 0;
+        margin-right: 0;
+
+        & .grid-cell {
+            padding-left: 0;
+            padding-right: 0; 
+        }
+    }
+}
+
+.grid-small {
+    margin-left: -$layoutPaddingSmall;
+    margin-right: -$layoutPaddingSmall;
+
+    & .grid-cell {
+        padding-left: $layoutPaddingSmall;
+        padding-right: $layoutPaddingSmall; 
+    }
+}
+
+.grid-large {
+    margin-left: -$layoutPaddingLarge;
+    margin-right: -$layoutPaddingLarge;
+
+    & .grid-cell {
+        padding-left: $layoutPaddingLarge;
+        padding-right: $layoutPaddingLarge; 
+    }
+}

@@ -1,0 +1,106 @@
+@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 $fontParagraphMargin;
+    font-size: 1em;
+    line-height: $fontLineHeight;
+}
+
+.header {
+    display: block;
+    font-weight: $fontWeightHeavy;
+    color: $colourFont;
+}
+
+@each $typographySize in $typographySizes {
+
+    $name: nth($typographySize, 1);
+    $size: nth($typographySize, 2);
+
+    .header-#{ $name } {
+
+        @if $name == inline {
+            font-size: #{ $size };
+        } @else {
+            font-size: #{ round($fontSize * $size) };
+        }
+    }
+
+}
+
+p {
+    margin: $fontParagraphMargin;
+}
+
+a {
+    color: $colourAccent;
+    text-decoration: none;
+
+    @include on-event() {
+        color: $colourAccentDarkest;
+    }
+}
+
+label {
+    font-size: $fontSizeSmall;
+    font-weight: $fontWeightHeavy;
+    color: $colourFontSecondary;
+}
+
+small {
+    font-size: $fontSizeSmall;
+}
+
+.no-colour-context {
+    color: inherit;
+
+    @include on-event {
+        color: inherit;
+    }
+}
+
+.text-primary {
+    color: $colourFont;
+}
+
+.text-secondary {
+    color: $colourFontSecondary;
+}
+
+.text-secondary-light {
+    color: $colourFontSecondaryLighter;
+}
+
+.text-accent {
+    color: $colourAccent;
+}
+
+.text-success {
+    color: $colourSuccess;
+}
+
+.text-warning {
+    color: $colourWarning;
+}
+
+.text-danger {
+    color: $colourDanger;
+}
+
+.text-align-left {
+    text-align: left;
+}
+
+.text-align-centre {
+    text-align: center;
+}
+
+.text-align-right {
+    text-align: right;
+}

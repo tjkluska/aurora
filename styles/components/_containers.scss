@@ -1,0 +1,45 @@
+@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
+
+.viewport {
+    height: 100%;
+    width: 100%;
+}
+
+.navbar,
+.statusbar {
+    padding: $layoutPaddingSmall $layoutPaddingLarge;
+    background-color: $colourBackgroundMedium;
+}
+
+.navbar {
+    @include border(bottom);
+}
+
+.statusbar {
+    @include border(top);
+}
+
+.sidebar {}
+
+.pane {
+    height: 100%;
+    padding-top: $layoutPaddingLarge;
+    padding-bottom: $layoutPaddingLarge;
+    overflow-y: auto;
+}
+
+.pane-left {
+    @include border(right);
+}
+
+.pane-right {
+    @include border(left);
+}
+
+.container {
+    max-width: $layoutContainerWidth;
+    margin: 0 auto;
+    padding-left: $layoutPaddingLarge;
+    padding-right: $layoutPaddingLarge;
+}

@@ -1,0 +1,54 @@
+@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
+
+.table-wrapper {
+    @include border;
+    border-radius: $borderRadius;
+}
+
+table,
+.table {
+    display: table;
+    border-collapse: collapse;
+    table-layout: fixed;
+    width: 100%;
+}
+
+th,
+.th,
+td,
+.td {
+    display: table-cell;
+    padding: $tableCellPaddingVertical $tableCellPaddingHorizontal;
+    text-align: left;
+    @include border(bottom);
+
+    &:not(:last-of-type) {
+         @include border(right);
+    }
+}
+
+th,
+.th {
+    font-weight: $fontWeightHeavy;
+    color: $colourFont;
+    background-color: $colourBackgroundMedium;
+}
+
+td,
+.td {
+
+
+}
+
+tr,
+.tr {
+
+    &:last-of-type {
+
+        & td,
+        & .td {
+            border-bottom: none;
+        }
+    }
+}

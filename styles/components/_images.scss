@@ -1,0 +1,29 @@
+@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
+
+img {
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: $borderRadius;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+}
+
+.avatar-medium {
+    width: 48px;
+    height: 48px;
+}
+
+.avatar-large {
+    width: 128px;
+    height: 128px;
+}
+
+.avatar-bordered {
+    padding: 2px;
+    @include border($width: 2px, $colour: $colourBorder);
+}

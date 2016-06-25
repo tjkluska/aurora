@@ -1,0 +1,194 @@
+@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
+
+.bleed {
+    @include bleed;
+}
+
+.no-padding {
+    padding: 0;
+}
+
+.padding-small {
+    padding: $layoutPaddingSmall;
+}
+
+.padding-small-horizontal {
+    padding-left: $layoutPaddingSmall;
+    padding-right: $layoutPaddingSmall;
+}
+
+.padding-small-vertical {
+    padding-top: $layoutPaddingSmall;
+    padding-bottom: $layoutPaddingSmall;
+}
+
+.padding-small-top {
+    padding-top: $layoutPaddingSmall;
+}
+
+.padding-small-right {
+    padding-right: $layoutPaddingSmall;
+}
+
+.padding-small-bottom {
+    padding-bottom: $layoutPaddingSmall;
+}
+
+.padding-small-left {
+    padding-left: $layoutPaddingSmall;
+}
+
+.padding-medium {
+    padding: $layoutPaddingMedium;
+}
+
+.padding-medium-horizontal {
+    padding-left: $layoutPaddingMedium;
+    padding-right: $layoutPaddingMedium;
+}
+
+.padding-medium-vertical {
+    padding-top: $layoutPaddingMedium;
+    padding-bottom: $layoutPaddingMedium;
+}
+
+.padding-medium-top {
+    padding-top: $layoutPaddingMedium;
+}
+
+.padding-medium-right {
+    padding-right: $layoutPaddingMedium;
+}
+
+.padding-medium-bottom {
+    padding-bottom: $layoutPaddingMedium;
+}
+
+.padding-medium-left {
+    padding-left: $layoutPaddingMedium;
+}
+
+.padding-large {
+    padding: $layoutPaddingLarge;
+}
+
+.padding-large-horizontal {
+    padding-left: $layoutPaddingLarge;
+    padding-right: $layoutPaddingLarge;
+}
+
+.padding-large-vertical {
+    padding-top: $layoutPaddingLarge;
+    padding-bottom: $layoutPaddingLarge;
+}
+
+.padding-large-top {
+    padding-top: $layoutPaddingLarge;
+}
+
+.padding-large-right {
+    padding-right: $layoutPaddingLarge;
+}
+
+.padding-large-bottom {
+    padding-bottom: $layoutPaddingLarge;
+}
+
+.padding-large-left {
+    padding-left: $layoutPaddingLarge;
+}
+
+.no-margin {
+    margin: 0;
+}
+
+.margin-small {
+    margin: $layoutPaddingSmall;
+}
+
+.margin-small-horizontal {
+    margin-left: $layoutPaddingSmall;
+    margin-right: $layoutPaddingSmall;
+}
+
+.margin-small-vertical {
+    margin-top: $layoutPaddingSmall;
+    margin-bottom: $layoutPaddingSmall;
+}
+
+.margin-small-top {
+    margin-top: $layoutPaddingSmall;
+}
+
+.margin-small-right {
+    margin-right: $layoutPaddingSmall;
+}
+
+.margin-small-bottom {
+    margin-bottom: $layoutPaddingSmall;
+}
+
+.margin-small-left {
+    margin-left: $layoutPaddingSmall;
+}
+
+.margin-medium {
+    margin: $layoutPaddingMedium;
+}
+
+.margin-medium-horizontal {
+    margin-left: $layoutPaddingMedium;
+    margin-right: $layoutPaddingMedium;
+}
+
+.margin-medium-vertical {
+    margin-top: $layoutPaddingMedium;
+    margin-bottom: $layoutPaddingMedium;
+}
+
+.margin-medium-top {
+    margin-top: $layoutPaddingMedium;
+}
+
+.margin-medium-right {
+    margin-right: $layoutPaddingMedium;
+}
+
+.margin-medium-bottom {
+    margin-bottom: $layoutPaddingMedium;
+}
+
+.margin-medium-left {
+    margin-left: $layoutPaddingMedium;
+}
+
+.margin-large {
+    margin: $layoutPaddingLarge;
+}
+
+.margin-large-horizontal {
+    margin-left: $layoutPaddingLarge;
+    margin-right: $layoutPaddingLarge;
+}
+
+.margin-large-vertical {
+    margin-top: $layoutPaddingLarge;
+    margin-bottom: $layoutPaddingLarge;
+}
+
+.margin-large-top {
+    margin-top: $layoutPaddingLarge;
+}
+
+.margin-large-right {
+    margin-right: $layoutPaddingLarge;
+}
+
+.margin-large-bottom {
+    margin-bottom: $layoutPaddingLarge;
+}
+
+.margin-large-left {
+    margin-left: $layoutPaddingLarge;
+}

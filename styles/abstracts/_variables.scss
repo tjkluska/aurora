@@ -1,0 +1,158 @@
+@import "_functions.scss";
+
+// Layout
+$layoutScrollbarWidth: 17px;
+$layoutContainerWidth: 1160px;
+$layoutPaddingSmall: 10px;
+$layoutPaddingMedium: 15px;
+$layoutPaddingLarge: 20px;
+$layoutClearing: 24px;
+$layoutClearingLarge: 48px;
+
+// Grid
+$gridColumns: 12;
+$gridGutterWidth: 15px;
+$gridRowClass: "row";
+$gridColumnClass: "column";
+$gridOffsetClass: "offset";
+$gridBreakpoints: (
+  (xs),
+  (sm, 768px),
+  (md, 992px),
+  (lg, 1200px)
+);
+
+
+// Font/Typography
+$typographyRatio: 1.25;
+$typographySizes: (
+  (xsmall,  (0.89 / $typographyRatio)),
+  (small,  (1 / $typographyRatio)),
+  (inline, 1em),
+  (root, 1),
+  (medium, $typographyRatio),
+  (large, pow($typographyRatio, 2)),
+  (xlarge, pow($typographyRatio, 3)),
+  (xxlarge, pow($typographyRatio, 4)),
+  (jumbo, pow($typographyRatio, 5))
+);
+
+$fontFamily: "Open Sans", sans-serif;
+
+$fontSize: 14px;
+$fontSizeSmall: round($fontSize * (1 / $typographyRatio));
+$fontSizeXSmall: round($fontSize * (0.89 / $typographyRatio));
+$fontWeight: 400;
+$fontWeightLight: 300;
+$fontWeightHeavy: 600;
+$fontWeightBold: 700;
+$fontLineHeight: 1.45;
+$fontParagraphMargin: 0.75em 0;
+
+
+// Colours
+// Colour adjustment figures
+$colourSmallIncrement: 5%;
+$colourMediumIncrement: 10%;
+$colourLargeIncrement: 15%;
+
+// Background colours
+$colourBackground: #FFFFFF;
+$colourBackgroundMedium: #FAFAFA;
+$colourBackgroundDark: #011627;
+
+// Font colours
+$colourFont: #111210;
+$colourFontLight: lighten($colourFont, $colourSmallIncrement);
+$colourFontLighter: lighten($colourFont, $colourMediumIncrement);
+$colourFontLightest: lighten($colourFont, $colourLargeIncrement);
+
+$colourFontSecondary: #57606B;
+$colourFontSecondaryLight: lighten($colourFontSecondary, $colourSmallIncrement);
+$colourFontSecondaryLighter: lighten($colourFontSecondary, $colourMediumIncrement);
+$colourFontSecondaryLightest: lighten($colourFontSecondary, $colourLargeIncrement);
+$colourFontSecondaryDark: darken($colourFontSecondary, $colourSmallIncrement);
+$colourFontSecondaryDarker: darken($colourFontSecondary, $colourMediumIncrement);
+$colourFontSecondaryDarkest: darken($colourFontSecondary, $colourLargeIncrement);
+
+$colourFontNegative: $colourBackground;
+
+// Main colour pallette
+$colourPrimary: #D6DBE5;
+$colourPrimaryLight: lighten($colourPrimary, $colourSmallIncrement);
+$colourPrimaryLighter: lighten($colourPrimary, $colourMediumIncrement);
+$colourPrimaryLightest: lighten($colourPrimary, $colourLargeIncrement);
+$colourPrimaryDark: darken($colourPrimary, $colourSmallIncrement);
+$colourPrimaryDarker: darken($colourPrimary, $colourMediumIncrement);
+$colourPrimaryDarkest: darken($colourPrimary, $colourLargeIncrement);
+
+$colourAccent: #2196F3;
+$colourAccentLight: lighten($colourAccent, $colourSmallIncrement);
+$colourAccentLighter: lighten($colourAccent, $colourMediumIncrement);
+$colourAccentLightest: lighten($colourAccent, $colourLargeIncrement);
+$colourAccentDark: darken($colourAccent, $colourSmallIncrement);
+$colourAccentDarker: darken($colourAccent, $colourMediumIncrement);
+$colourAccentDarkest: darken($colourAccent, $colourLargeIncrement);
+
+$colourCompliment: #F18F4C;
+$colourComplimentLight: lighten($colourCompliment, $colourSmallIncrement);
+$colourComplimentLighter: lighten($colourCompliment, $colourMediumIncrement);
+$colourComplimentLightest: lighten($colourCompliment, $colourLargeIncrement);
+$colourComplimentDark: darken($colourCompliment, $colourSmallIncrement);
+$colourComplimentDarker: darken($colourCompliment, $colourMediumIncrement);
+$colourComplimentDarkest: darken($colourCompliment, $colourLargeIncrement);
+
+// Contextual colours
+$colourSuccess: #5DC560;
+$colourSuccessLight: lighten($colourSuccess, $colourSmallIncrement);
+$colourSuccessLighter: lighten($colourSuccess, $colourMediumIncrement);
+$colourSuccessLightest: lighten($colourSuccess, $colourLargeIncrement);
+$colourSuccessDark: darken($colourSuccess, $colourSmallIncrement);
+$colourSuccessDarker: darken($colourSuccess, $colourMediumIncrement);
+$colourSuccessDarkest: darken($colourSuccess, $colourLargeIncrement);
+
+$colourWarning: #FFC107;
+$colourWarningLight: lighten($colourWarning, $colourSmallIncrement);
+$colourWarningLighter: lighten($colourWarning, $colourMediumIncrement);
+$colourWarningLightest: lighten($colourWarning, $colourLargeIncrement);
+$colourWarningDark: darken($colourWarning, $colourSmallIncrement);
+$colourWarningDarker: darken($colourWarning, $colourMediumIncrement);
+$colourWarningDarkest: darken($colourWarning, $colourLargeIncrement);
+
+$colourDanger: #F55D3E;
+$colourDangerLight: lighten($colourDanger, $colourSmallIncrement);
+$colourDangerLighter: lighten($colourDanger, $colourMediumIncrement);
+$colourDangerLightest: lighten($colourDanger, $colourLargeIncrement);
+$colourDangerDark: darken($colourDanger, $colourSmallIncrement);
+$colourDangerDarker: darken($colourDanger, $colourMediumIncrement);
+$colourDangerDarkest: darken($colourDanger, $colourLargeIncrement);
+
+// Border colours
+$colourBorder: #EBEBEC;
+$colourBorderLight: lighten($colourBorder, $colourSmallIncrement);
+$colourBorderLighter: lighten($colourBorder, $colourMediumIncrement);
+$colourBorderLightest: lighten($colourBorder, $colourLargeIncrement);
+$colourBorderDark: darken($colourBorder, $colourSmallIncrement);
+$colourBorderDarker: darken($colourBorder, $colourMediumIncrement);
+$colourBorderDarkest: darken($colourBorder, $colourLargeIncrement);
+
+
+$borderWidth: 1px;
+$borderStyle: solid;
+$borderRadius: 2px;
+
+$iconSizeSmall: 18px;
+$iconSizeMedium: 24px;
+$iconSizeLarge: 28px;
+
+$buttonPaddingVertical: 12px;
+$buttonPaddingHorizontal: 25px;
+$buttonSmallPaddingVertical: 6px;
+$buttonSmallPaddingHorizontal: 12px;
+$buttonLargePaddingVertical: 15px;
+$buttonLargePaddingHorizontal: 32px;
+
+$tableCellPaddingVertical: $layoutPaddingSmall;
+$tableCellPaddingHorizontal: $layoutPaddingMedium;
+
+$textInputs: 'input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="range"])';

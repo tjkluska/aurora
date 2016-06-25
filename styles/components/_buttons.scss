@@ -1,0 +1,21 @@
+@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
+
+.button {
+    display: inline-block;
+    padding: $buttonPaddingVertical $buttonPaddingHorizontal;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    font-weight: $fontWeightHeavy;
+    color: $colourFontNegative;
+    background-color: $colourAccent;
+    outline: none;
+    border: none;
+    border-radius: $borderRadius;
+    cursor: pointer;
+
+    @include on-event {
+        color: $colourFontNegative;
+        background-color: $colourAccentDarker;
+    }
+}
