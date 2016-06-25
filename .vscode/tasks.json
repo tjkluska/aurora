@@ -1,0 +1,26 @@
+{
+    "version": "0.1.0",
+    "command": "node-sass",
+    "isShellCommand": true,
+    "showOutput": "always",
+    "tasks": [
+        {
+            "taskName": "Main Stylesheet",
+            "suppressTaskName": true,
+            "isBuildCommand": true,
+            "args": ["styles/site.scss", "styles/site.css", "--output-style compressed"]
+        },
+        {
+            "taskName": "Extensions Stylesheet",
+            "suppressTaskName": true,
+            "isBuildCommand": true,
+            "args": ["styles/extensions.scss", "styles/extensions.css", "--output-style compressed"]
+        },
+        {
+            "taskName": "Index Stylesheet",
+            "suppressTaskName": true,
+            "isBuildCommand": true,
+            "args": ["styles/views/index.scss", "styles/views/index.css", "--output-style compressed"]
+        }
+    ]    
+}
