@@ -1,0 +1,62 @@
+@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
+
+.tab-control {
+    @include border;
+    border-radius: $borderRadius;
+}
+
+.tabs-panel {
+    background-color: $colourBackgroundMedium;
+    @include border(bottom);
+    overflow: visible;
+}
+
+.tab-item {
+    position: relative;
+    padding: $buttonPaddingVertical $buttonPaddingHorizontal;
+    color: $colourFontSecondary;
+    font-weight: $fontWeightHeavy;
+    text-align: center;
+    cursor: pointer;
+
+    &:not(:last-of-type) {
+        @include border(right);
+    }
+
+    &:after {
+        display: none;
+        position: absolute;
+        content: " ";
+        bottom: -$borderWidth;
+        left: 0;
+        width: 100%;
+        height: $borderWidth;
+        background-color: $colourBackground;
+    }
+
+    &:hover,
+    &.active {
+        color: $colourFont;
+    }
+
+    &.active {
+        background-color: $colourBackground;
+
+        &:after {
+            display: block;
+        }
+    }
+}
+
+.tabs-viewport {
+}
+
+.tab-pane {
+    display: none;
+    padding: $layoutPaddingMedium;
+
+    &.active {
+        display: block;
+    }
+}

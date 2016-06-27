@@ -1,0 +1,36 @@
+@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
+
+.label {
+    display: inline-block;
+    padding: 0 0.5em;
+    color: inherit;
+    font-weight: $fontWeightHeavy;
+    line-height: $fontLineHeight;
+    text-align: center;
+    background-color: $colourPrimary;
+    border-radius: $borderRadius;
+}
+
+.label-accent,
+.label-success,
+.label-warning,
+.label-danger {
+    color: $colourFontNegative;
+}
+
+.label-accent {
+    background-color: $colourAccent;
+}
+
+.label-success {
+    background-color: $colourSuccess;
+}
+
+.label-warning {
+    background-color: $colourWarning;
+}
+
+.label-danger {
+    background-color: $colourDanger;
+}
