@@ -117,13 +117,13 @@ small {
   color: #2196F3; }
 
 .text-success {
-  color: #5DC560; }
+  color: #4CAF50; }
 
 .text-warning {
   color: #FFC107; }
 
 .text-danger {
-  color: #F55D3E; }
+  color: #F44336; }
 
 .text-align-left {
   text-align: left; }
@@ -227,13 +227,13 @@ small {
   color: #2196F3; }
 
 .icon-success {
-  color: #5DC560; }
+  color: #4CAF50; }
 
 .icon-warning {
   color: #FFC107; }
 
 .icon-danger {
-  color: #F55D3E; }
+  color: #F44336; }
 
 .dripicons-alarm:before {
   content: "\61"; }
@@ -850,6 +850,27 @@ small {
   .button:hover, .button:active, .button:focus {
     color: #FFFFFF;
     background-color: #0c7cd5; }
+
+.button-small {
+  padding: 6px 12px; }
+
+.button-large {
+  padding: 15px 32px; }
+
+.button-success {
+  background-color: #4CAF50; }
+  .button-success:hover, .button-success:active, .button-success:focus {
+    background-color: #3d8b40; }
+
+.button-warning {
+  background-color: #FFC107; }
+  .button-warning:hover, .button-warning:active, .button-warning:focus {
+    background-color: #d39e00; }
+
+.button-danger {
+  background-color: #F44336; }
+  .button-danger:hover, .button-danger:active, .button-danger:focus {
+    background-color: #ea1c0d; }
 
 img {
   display: inline-block;

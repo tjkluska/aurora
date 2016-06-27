@@ -103,7 +103,7 @@ $colourComplimentDarker: darken($colourCompliment, $colourMediumIncrement);
 $colourComplimentDarkest: darken($colourCompliment, $colourLargeIncrement);
 
 // Contextual colours
-$colourSuccess: #5DC560;
+$colourSuccess: #4CAF50;
 $colourSuccessLight: lighten($colourSuccess, $colourSmallIncrement);
 $colourSuccessLighter: lighten($colourSuccess, $colourMediumIncrement);
 $colourSuccessLightest: lighten($colourSuccess, $colourLargeIncrement);
@@ -119,7 +119,7 @@ $colourWarningDark: darken($colourWarning, $colourSmallIncrement);
 $colourWarningDarker: darken($colourWarning, $colourMediumIncrement);
 $colourWarningDarkest: darken($colourWarning, $colourLargeIncrement);
 
-$colourDanger: #F55D3E;
+$colourDanger: #F44336;
 $colourDangerLight: lighten($colourDanger, $colourSmallIncrement);
 $colourDangerLighter: lighten($colourDanger, $colourMediumIncrement);
 $colourDangerLightest: lighten($colourDanger, $colourLargeIncrement);

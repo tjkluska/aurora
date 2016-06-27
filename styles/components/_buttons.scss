@@ -19,3 +19,35 @@
         background-color: $colourAccentDarker;
     }
 }
+
+.button-small {
+    padding: $buttonSmallPaddingVertical $buttonSmallPaddingHorizontal;
+}
+
+.button-large {
+    padding: $buttonLargePaddingVertical $buttonLargePaddingHorizontal;
+}
+
+.button-success {
+    background-color: $colourSuccess;
+
+    @include on-event {
+        background-color: $colourSuccessDarker;
+    }
+}
+
+.button-warning {
+    background-color: $colourWarning;
+
+    @include on-event {
+        background-color: $colourWarningDarker;
+    }
+}
+
+.button-danger {
+    background-color: $colourDanger;
+
+    @include on-event {
+        background-color: $colourDangerDarker;
+    }
+}
