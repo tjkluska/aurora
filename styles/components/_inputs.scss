@@ -1,0 +1,287 @@
+@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
+
+#{ inputs() },
+select,
+textarea {
+    display: block;
+    width: 100%;
+    min-width: 150px;
+    padding: $inputPaddingVertical $inputPaddingHorizontal;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    line-height: $fontLineHeight;
+    color: $colourFont;
+    background-color: $colourBackground;
+    @include border;
+    border-radius: $borderRadius;
+    outline: none;
+    -webkit-transition: border 150ms ease-out;
+    -moz-transition: border 150ms ease-out;
+    -o-transition: border 150ms ease-out;
+    transition: border 150ms ease-out;
+
+    &:focus,
+    &:active {
+        border-color: $colourAccent;
+    }
+
+    &:disabled {
+        background-color: $colourBackgroundMedium;
+        cursor: not-allowed;
+    }
+
+    &:invalid {
+        border-color: $colourDanger;
+
+        & + .validation-message {
+            display: block;
+        }
+    }
+}
+
+#{ inputs() },
+select {
+    height: $inputHeight;
+}
+
+#{ inputs(toggle) } {
+    opacity: 0;
+}
+
+.toggle {
+    display: inline-block;
+    position: relative;
+    margin-right: 5px;
+    background-color: $colourBackground;
+    @include border;
+    vertical-align: text-bottom;
+
+    & label {
+        position: absolute;
+        display: block;
+        content: " ";
+        margin: 0;
+        cursor: pointer;
+    }
+
+    & + label {
+        display: inline-block;
+        margin: 0 $layoutPaddingMedium 0 0;
+        font-size: 1em;
+        font-weight: $fontWeight;
+        color: inherit;
+        cursor: pointer;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+}
+
+.toggle-switch {
+    width: 32px;
+    height: 18px;
+    border-radius: 12px;
+
+    & label {
+        top: 0;
+        left: 0;
+        width: 32px;
+        height: 18px;
+
+        &:after {
+            position: absolute;
+            display: block;
+            content: " ";
+            width: 12px;
+            height: 12px;
+            top: 2px;
+            left: 2px;
+            background-color: $colourFontSecondary;
+            border-radius: 50%;
+            -webkit-transition: all 200ms ease-out;
+            -moz-transition: all 200ms ease-out;
+            -o-transition: all 200ms ease-out;
+            transition: all 200ms ease-out;
+        }
+    }
+
+    &:hover {
+        & label {
+            &:after {
+                background-color: $colourAccent;
+            }
+        }
+    }
+
+    & input[type="checkbox"] {
+
+        &:focus,
+        &:active {
+            & label {
+                &:after {
+                    background-color: $colourAccent;
+                }
+            }
+        }
+
+        &:checked {
+
+            & + label {
+                &:after {
+                    left: 16px;
+                    background-color: $colourAccent;
+                }
+            }
+        }
+
+        &:disabled {
+
+            & + label {
+                &:after {
+                    background-color: $colourPrimary;
+                }
+            }
+        }
+    }
+}
+
+.toggle-checkbox {
+    width: 18px;
+    height: 18px;
+    border: none;
+
+    & label {
+        width: 18px;
+        height: 18px;
+        top: 0;
+        left: 0;
+        @include border;
+        border-radius: $borderRadius;
+        -webkit-transition: border 150ms ease-out;
+        -moz-transition: border 150ms ease-out;
+        -o-transition: border 150ms ease-out;
+        transition: border 150ms ease-out;
+
+        &:after {
+            position: absolute;
+            display: block;
+            content: " ";
+            width: 6px;
+            height: 12px;
+            top: 1px;
+            left: 5px;
+            border-right: 3px solid transparent;
+            border-bottom: 3px solid transparent;
+            -webkit-transform: rotate(45deg);
+            -moz-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+            -webkit-transition: all 200ms ease-out;
+            -moz-transition: all 200ms ease-out;
+            -o-transition: all 200ms ease-out;
+            transition: all 200ms ease-out;
+        }
+
+        &:hover {
+            border-color: $colourAccent;
+        }
+    }
+
+    & input[type="checkbox"] {
+
+        &:focus,
+        &:active {
+            & label {
+                border-color: $colourAccent;
+            }
+        }
+
+        &:checked {
+
+            & + label {
+                background-color: $colourAccent;
+                border-color: $colourAccent;
+
+                &:after {
+                    border-color: $colourBackground;
+                }
+            }
+        }
+
+        &:disabled {
+
+            & + label {
+                background-color: $colourBackgroundMedium;
+
+                &:after {
+                    background-color: $colourBackgroundMedium;
+                }
+            }
+        }
+    }
+}
+
+
+.toggle-radio {
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    -webkit-transition: border 150ms ease-out;
+    -moz-transition: border 150ms ease-out;
+    -o-transition: border 150ms ease-out;
+    transition: border 150ms ease-out;
+
+    & label {
+        top: 0;
+        left: 0;
+        width: 18px;
+        height: 18px;
+
+
+        &:after {
+            position: absolute;
+            display: block;
+            content: " ";
+            width: 10px;
+            height: 10px;
+            top: 3px;
+            left: 3px;
+            background-color: $colourFontSecondary;
+            border-radius: 50%;
+            -webkit-transition: all 200ms ease-out;
+            -moz-transition: all 200ms ease-out;
+            -o-transition: all 200ms ease-out;
+            transition: all 200ms ease-out;
+        }
+    }
+
+    &:hover {
+        border-color: $colourAccent;
+    }
+
+    & input[type="radio"] {
+
+        &:focus {
+            & label {
+
+                &:after {
+                    background-color: $colourAccent;
+                }
+            }
+        }
+
+        &:checked {
+
+            & + label {
+
+                &:after {
+                    background-color: $colourAccent;
+                }
+            }
+        }
+    }
+}
+

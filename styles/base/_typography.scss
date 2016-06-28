@@ -48,6 +48,8 @@ a {
 }
 
 label {
+    display: block;
+    margin-bottom: 5px;
     font-size: $fontSizeSmall;
     font-weight: $fontWeightHeavy;
     color: $colourFontSecondary;

@@ -8,3 +8,20 @@
 
     @return $value;
 }
+
+@function inputs($type: text) {
+
+    $selector: ();
+
+    @each $inputType in $inputTypes {
+
+        $name: nth($inputType, 1);
+        $value: nth($inputType, 2);
+
+        @if $name == $type {
+            $selector: append($selector, "input[type='#{ $value }']", comma);
+        }
+    }
+
+    @return $selector;
+}

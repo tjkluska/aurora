@@ -43,3 +43,8 @@
     padding-left: $layoutPaddingLarge;
     padding-right: $layoutPaddingLarge;
 }
+
+.well {
+    background-color: $colourBackgroundDark;
+    border-radius: $borderRadius;
+}

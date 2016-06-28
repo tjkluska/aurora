@@ -59,7 +59,8 @@ $colourLargeIncrement: 15%;
 // Background colours
 $colourBackground: #FFFFFF;
 $colourBackgroundMedium: #FAFAFA;
-$colourBackgroundDark: #011627;
+$colourBackgroundDark: darken($colourBackground, $colourSmallIncrement);
+$colourBackgroundNegative: #011627;
 
 // Font colours
 $colourFont: #111210;
@@ -155,4 +156,20 @@ $buttonLargePaddingHorizontal: 32px;
 $tableCellPaddingVertical: $layoutPaddingSmall;
 $tableCellPaddingHorizontal: $layoutPaddingMedium;
 
-$textInputs: 'input:not([type="submit"]):not([type="checkbox"]):not([type="radio"]):not([type="range"])';
+$inputTypes: (
+  (text, "text"),
+  (text, "email"),
+  (text, "search"),
+  (text, "password"),
+  (text, "url"),
+  (text, "number"),
+  (text, "date"),
+  (text, "datetime"),
+  (text, "datetime-local"),
+  (toggle, "checkbox"),
+  (toggle, "radio")
+);
+
+$inputPaddingVertical: $layoutPaddingSmall;
+$inputPaddingHorizontal: $layoutPaddingMedium;
+$inputHeight: round(($fontSize * $fontLineHeight) + (2 * $inputPaddingVertical) + (2 * $borderWidth));
