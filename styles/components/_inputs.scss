@@ -53,16 +53,25 @@ select {
     display: inline-block;
     position: relative;
     margin-right: 5px;
-    background-color: $colourBackground;
-    @include border;
     vertical-align: text-bottom;
+    overflow: hidden;
 
     & label {
-        position: absolute;
         display: block;
+        position: absolute;
         content: " ";
+        top: 0;
+        left: 0;
         margin: 0;
+        background-color: $colourBackground;
+        @include border;
         cursor: pointer;
+
+        &:after {
+            position: absolute;
+            display: block;
+            content: " ";
+        }
     }
 
     & + label {
@@ -82,33 +91,27 @@ select {
 .toggle-switch {
     width: 32px;
     height: 18px;
-    border-radius: 12px;
 
     & label {
-        top: 0;
-        left: 0;
         width: 32px;
         height: 18px;
+        border-radius: 9px;
 
         &:after {
-            position: absolute;
-            display: block;
-            content: " ";
             width: 12px;
             height: 12px;
             top: 2px;
             left: 2px;
             background-color: $colourFontSecondary;
             border-radius: 50%;
-            -webkit-transition: all 200ms ease-out;
-            -moz-transition: all 200ms ease-out;
-            -o-transition: all 200ms ease-out;
-            transition: all 200ms ease-out;
+            -webkit-transition: transform 200ms ease-out, background 200ms ease-out;
+            -moz-transition: transform 200ms ease-out, background 200ms ease-out;
+            -o-transition: transform 200ms ease-out, background 200ms ease-out;
+            transition: transform 200ms ease-out, background 200ms ease-out;
         }
-    }
 
-    &:hover {
-        & label {
+        &:hover {
+
             &:after {
                 background-color: $colourAccent;
             }
@@ -129,9 +132,10 @@ select {
         &:checked {
 
             & + label {
+
                 &:after {
-                    left: 16px;
-                    background-color: $colourAccent;
+                    transform: translateX(14px);
+                    background-color: $colourBackground;
                 }
             }
         }
@@ -150,14 +154,10 @@ select {
 .toggle-checkbox {
     width: 18px;
     height: 18px;
-    border: none;
 
     & label {
         width: 18px;
         height: 18px;
-        top: 0;
-        left: 0;
-        @include border;
         border-radius: $borderRadius;
         -webkit-transition: border 150ms ease-out;
         -moz-transition: border 150ms ease-out;
@@ -165,9 +165,6 @@ select {
         transition: border 150ms ease-out;
 
         &:after {
-            position: absolute;
-            display: block;
-            content: " ";
             width: 6px;
             height: 12px;
             top: 1px;
@@ -179,10 +176,10 @@ select {
             -ms-transform: rotate(45deg);
             -o-transform: rotate(45deg);
             transform: rotate(45deg);
-            -webkit-transition: all 200ms ease-out;
-            -moz-transition: all 200ms ease-out;
-            -o-transition: all 200ms ease-out;
-            transition: all 200ms ease-out;
+            -webkit-transition: border 200ms ease-out;
+            -moz-transition: border 200ms ease-out;
+            -o-transition: border 200ms ease-out;
+            transition: border 200ms ease-out;
         }
 
         &:hover {
@@ -202,8 +199,6 @@ select {
         &:checked {
 
             & + label {
-                background-color: $colourAccent;
-                border-color: $colourAccent;
 
                 &:after {
                     border-color: $colourBackground;
@@ -224,42 +219,50 @@ select {
     }
 }
 
+.toggle-switch,
+.toggle-checkbox {
+
+    & input[type="checkbox"] {
+
+        &:checked {
+
+            & + label {
+                background-color: $colourAccent;
+                border-color: $colourAccent;
+            }
+        }
+    }
+}
+
 
 .toggle-radio {
     width: 18px;
     height: 18px;
-    border-radius: 50%;
-    -webkit-transition: border 150ms ease-out;
-    -moz-transition: border 150ms ease-out;
-    -o-transition: border 150ms ease-out;
-    transition: border 150ms ease-out;
 
     & label {
-        top: 0;
-        left: 0;
         width: 18px;
         height: 18px;
-
+        border-radius: 50%;
 
         &:after {
-            position: absolute;
-            display: block;
-            content: " ";
             width: 10px;
             height: 10px;
             top: 3px;
             left: 3px;
             background-color: $colourFontSecondary;
             border-radius: 50%;
-            -webkit-transition: all 200ms ease-out;
-            -moz-transition: all 200ms ease-out;
-            -o-transition: all 200ms ease-out;
-            transition: all 200ms ease-out;
+            -webkit-transition: background 200ms ease-out;
+            -moz-transition: background 200ms ease-out;
+            -o-transition: background 200ms ease-out;
+            transition: background 200ms ease-out;
         }
-    }
 
-    &:hover {
-        border-color: $colourAccent;
+        &:hover {
+
+            &:after {
+                background-color: $colourAccent;
+            }
+        }
     }
 
     & input[type="radio"] {
@@ -276,12 +279,25 @@ select {
         &:checked {
 
             & + label {
+                background-color: $colourAccent;
+                border-color: $colourAccent;
 
                 &:after {
-                    background-color: $colourAccent;
+                    background-color: $colourBackground;
                 }
             }
         }
+    }
+}
+
+.toggle-switch,
+.toggle-radio {
+
+    & label {
+        -webkit-transition: background 200ms ease-out;
+        -moz-transition: background 200ms ease-out;
+        -o-transition: background 200ms ease-out;
+        transition: background 200ms ease-out;
     }
 }
 
