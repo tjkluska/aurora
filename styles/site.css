@@ -1347,18 +1347,6 @@ tr:last-of-type .td,
 .table-striped .tr:nth-child(even) {
   background-color: #FCFCFC; }
 
-@keyframes tooltip {
-  from {
-    -webkit-transform: translate(0, 10px);
-    -ms-transform: translate(0, 10px);
-    -o-transform: translate(0, 10px);
-    transform: translate(0, 10px); }
-  to {
-    -webkit-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    transform: translate(0, 0); } }
-
 [data-tooltip] {
   position: relative; }
   [data-tooltip]:before, [data-tooltip]:after {
@@ -1440,6 +1428,25 @@ tr:last-of-type .td,
 [data-tooltip-position="bottom right"]:after {
   right: 0;
   text-align: right; }
+
+[data-tooltip-position="right"]:before, [data-tooltip-position="right"]:after {
+  top: 50%;
+  left: 100%;
+  bottom: auto; }
+
+[data-tooltip-position="right"]:before {
+  margin-left: 2px;
+  -webkit-transform: rotate(45deg) translate(0, -50%);
+  -ms-transform: rotate(45deg) translate(0, -50%);
+  -o-transform: rotate(45deg) translate(0, -50%);
+  transform: rotate(45deg) translate(0, -50%); }
+
+[data-tooltip-position="right"]:after {
+  margin-left: 8px;
+  -webkit-transform: translate(0, -50%);
+  -ms-transform: translate(0, -50%);
+  -o-transform: translate(0, -50%);
+  transform: translate(0, -50%); }
 
 .tab-control {
   border: 1px solid #E6E6E7;
