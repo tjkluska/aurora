@@ -242,7 +242,7 @@
                             in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                         </p>
                         <div class="table-wrapper">
-                            <table>
+                            <table class="table-striped">
                                 <thead>
                                     <tr>
                                         <th>
@@ -346,7 +346,7 @@
                                             </div>
                                             Data Stuff
                                         </td>
-                                        <td>Data Stuff</td>
+                                        <td><span class="loader loader-waiting"></span> Data Stuff</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -402,6 +402,11 @@
                                     <label for="radio2"></label>
                                 </div>
                                 <label for="radio2">Radio</label>
+                                <div class="toggle toggle-radio">
+                                    <input type="radio" id="radio3" name="radio" value="No" disabled>
+                                    <label for="radio3"></label>
+                                </div>
+                                <label for="radio3">Radio</label>
                             </div>
                         </div>
                         <p>
@@ -411,15 +416,15 @@
                             <button class="button button-danger"><span class="icon dripicons-arrow-right margin-small-right"></span> Send Something</button>
                         </p>
                         <p>
-                            <a href="#" class="button">Send Something</a>
-                            <a href="#" class="button button-success">Send Something</a>
-                            <a href="#" class="button button-warning">Send Something</a>
+                            <a href="#" class="button" data-tooltip="This is the tooltip">Send Something</a>
+                            <a href="#" class="button button-success" data-tooltip="This is the tooltip" data-tooltip-position="top centre">Send Something</a>
+                            <a href="#" class="button button-warning" data-tooltip="This is the tooltip" data-tooltip-position="top right">Send Something</a>
                             <a href="#" class="button button-danger">Send Something</a>
                         </p>
                         <p>
-                            <a href="#" class="button button-small">Small Button</a>
-                            <a href="#" class="button button-small button-success">Small Button</a>
-                            <a href="#" class="button button-small button-warning">Small Button</a>
+                            <a href="#" class="button button-small" data-tooltip="This is the tooltip" data-tooltip-position="bottom">Small Button</a>
+                            <a href="#" class="button button-small button-success" data-tooltip="This is the tooltip" data-tooltip-position="bottom centre">Small Button</a>
+                            <a href="#" class="button button-small button-warning" data-tooltip="This is the tooltip" data-tooltip-position="bottom right">Small Button</a>
                             <a href="#" class="button button-small button-danger">Small Button</a>
                         </p>
                         <p>

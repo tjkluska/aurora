@@ -21,7 +21,6 @@ td,
     display: table-cell;
     padding: $tableCellPaddingVertical $tableCellPaddingHorizontal;
     text-align: left;
-    @include border(bottom);
 
     &:not(:last-of-type) {
          @include border(right);
@@ -33,12 +32,12 @@ th,
     font-weight: $fontWeightHeavy;
     color: $colourFont;
     background-color: $colourBackgroundMedium;
+    @include border(bottom);
 }
 
 td,
 .td {
-
-
+    @include border(bottom, $colour: $colourBorderLight);
 }
 
 tr,
@@ -55,4 +54,11 @@ tr,
 
 .table-striped {
     
+    & tr,
+    & .tr {
+
+        &:nth-child(even) {
+            background-color: $colourBackgroundHighlight;
+        }
+    }
 }

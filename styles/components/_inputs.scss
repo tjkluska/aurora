@@ -209,8 +209,6 @@ select {
         &:disabled {
 
             & + label {
-                background-color: $colourBackgroundMedium;
-
                 &:after {
                     background-color: $colourBackgroundMedium;
                 }
@@ -229,6 +227,13 @@ select {
             & + label {
                 background-color: $colourAccent;
                 border-color: $colourAccent;
+            }
+        }
+
+        &:disabled {
+
+            & + label {
+                background-color: $colourBackgroundMedium;
             }
         }
     }
@@ -287,6 +292,17 @@ select {
                 }
             }
         }
+
+        &:disabled {
+
+            & + label {
+                background-color: $colourBackgroundMedium;
+
+                &:after {
+                    background-color: $colourPrimary;
+                }
+            }
+        }
     }
 }
 
@@ -298,6 +314,81 @@ select {
         -moz-transition: background 200ms ease-out;
         -o-transition: background 200ms ease-out;
         transition: background 200ms ease-out;
+    }
+}
+
+.input-group-loadable,
+.input-group-icon {
+    position: relative;
+    width: 100%;
+
+    & #{ inputs() },
+    & select {
+        position: relative;
+        top: 0;
+    }
+}
+
+.input-group-loadable,
+.input-group-icon {
+
+    & #{ inputs() },
+    & select {
+        padding-right: $inputHeight;
+        z-index: 1;
+    }
+}
+
+.input-group-loadable {
+
+    & .loader {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        top: 50%;
+        right: 12px;
+        margin: -9px 0 0 0;
+        z-index: 2;
+    }
+
+    &.input-group-loadable-left {
+
+        & #{ inputs() },
+        & select {
+            padding-left: $inputHeight;
+            padding-right: 12px;
+        }
+
+        & .loader {
+            left: 12px;
+            right: auto;
+        }
+    }
+}
+
+.input-group-icon {
+
+    & .icon {
+        position: absolute;
+        top: 50%;
+        right: 12px;
+        margin: -9px 0 0 0;
+        color: $colourFontSecondaryLight;
+        z-index: 2;
+    }
+
+    &.input-group-icon-left {
+
+        & #{ inputs() },
+        & select {
+            padding-left: $inputHeight;
+            padding-right: 12px;
+        }
+
+        & .icon {
+            left: 12px;
+            right: auto;
+        }
     }
 }
 

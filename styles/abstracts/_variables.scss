@@ -61,6 +61,7 @@ $colourBackground: #FFFFFF;
 $colourBackgroundMedium: #FAFAFA;
 $colourBackgroundDark: darken($colourBackground, $colourSmallIncrement);
 $colourBackgroundNegative: #011627;
+$colourBackgroundHighlight: #FCFCFC;
 
 // Font colours
 $colourFont: #111210;
@@ -129,7 +130,7 @@ $colourDangerDarker: darken($colourDanger, $colourMediumIncrement);
 $colourDangerDarkest: darken($colourDanger, $colourLargeIncrement);
 
 // Border colours
-$colourBorder: #EBEBEC;
+$colourBorder: #E6E6E7;
 $colourBorderLight: lighten($colourBorder, $colourSmallIncrement);
 $colourBorderLighter: lighten($colourBorder, $colourMediumIncrement);
 $colourBorderLightest: lighten($colourBorder, $colourLargeIncrement);

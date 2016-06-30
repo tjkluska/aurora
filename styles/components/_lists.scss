@@ -9,14 +9,14 @@
 .list-hover {
     & .list-item {
         &:hover {
-            background-color: $colourBackgroundMedium;
+            background-color: $colourBackgroundHighlight;
         }
     }
 }
 
 .list-item {
     padding: $layoutPaddingSmall $layoutPaddingMedium;
-    @include border(bottom);
+    @include border(bottom, $colour: $colourBorderLight);
 }
 
 .thread {
