@@ -18,6 +18,7 @@
     color: $colourFontSecondary;
     font-weight: $fontWeightHeavy;
     text-align: center;
+    @include trim-text;
     cursor: pointer;
 
     &:not(:last-of-type) {

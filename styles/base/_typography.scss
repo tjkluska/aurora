@@ -106,3 +106,7 @@ small {
 .text-align-right {
     text-align: right;
 }
+
+.trim-text {
+    @include trim-text;
+}

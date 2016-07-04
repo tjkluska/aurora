@@ -17,6 +17,12 @@
     box-shadow: $h $v $blur $spread rgba($colour, $alpha);
 }
 
+@mixin trim-text {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
 // Event wrapper
 // @author Harry Roberts
 // @param {Bool} $self (false) - Whether or not to include current selector

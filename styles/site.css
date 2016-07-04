@@ -136,6 +136,11 @@ small {
 .text-align-right {
   text-align: right; }
 
+.trim-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; }
+
 .viewport {
   height: 100%;
   width: 100%; }
@@ -1123,74 +1128,88 @@ input[type='checkbox'], input[type='radio'] {
   -o-transition: background 200ms ease-out;
   transition: background 200ms ease-out; }
 
-.input-group-loadable,
-.input-group-icon {
+.loadable-input,
+.icon-input {
   position: relative;
   width: 100%; }
-  .input-group-loadable input[type='text'], .input-group-loadable input[type='email'], .input-group-loadable input[type='search'], .input-group-loadable input[type='password'], .input-group-loadable input[type='url'], .input-group-loadable input[type='number'], .input-group-loadable input[type='date'], .input-group-loadable input[type='datetime'], .input-group-loadable input[type='datetime-local'],
-  .input-group-loadable select,
-  .input-group-icon input[type='text'],
-  .input-group-icon input[type='email'],
-  .input-group-icon input[type='search'],
-  .input-group-icon input[type='password'],
-  .input-group-icon input[type='url'],
-  .input-group-icon input[type='number'],
-  .input-group-icon input[type='date'],
-  .input-group-icon input[type='datetime'],
-  .input-group-icon input[type='datetime-local'],
-  .input-group-icon select {
+  .loadable-input input[type='text'], .loadable-input input[type='email'], .loadable-input input[type='search'], .loadable-input input[type='password'], .loadable-input input[type='url'], .loadable-input input[type='number'], .loadable-input input[type='date'], .loadable-input input[type='datetime'], .loadable-input input[type='datetime-local'],
+  .loadable-input select,
+  .icon-input input[type='text'],
+  .icon-input input[type='email'],
+  .icon-input input[type='search'],
+  .icon-input input[type='password'],
+  .icon-input input[type='url'],
+  .icon-input input[type='number'],
+  .icon-input input[type='date'],
+  .icon-input input[type='datetime'],
+  .icon-input input[type='datetime-local'],
+  .icon-input select {
     position: relative;
     top: 0; }
 
-.input-group-loadable input[type='text'], .input-group-loadable input[type='email'], .input-group-loadable input[type='search'], .input-group-loadable input[type='password'], .input-group-loadable input[type='url'], .input-group-loadable input[type='number'], .input-group-loadable input[type='date'], .input-group-loadable input[type='datetime'], .input-group-loadable input[type='datetime-local'],
-.input-group-loadable select,
-.input-group-icon input[type='text'],
-.input-group-icon input[type='email'],
-.input-group-icon input[type='search'],
-.input-group-icon input[type='password'],
-.input-group-icon input[type='url'],
-.input-group-icon input[type='number'],
-.input-group-icon input[type='date'],
-.input-group-icon input[type='datetime'],
-.input-group-icon input[type='datetime-local'],
-.input-group-icon select {
+.loadable-input input[type='text'], .loadable-input input[type='email'], .loadable-input input[type='search'], .loadable-input input[type='password'], .loadable-input input[type='url'], .loadable-input input[type='number'], .loadable-input input[type='date'], .loadable-input input[type='datetime'], .loadable-input input[type='datetime-local'],
+.loadable-input select,
+.icon-input input[type='text'],
+.icon-input input[type='email'],
+.icon-input input[type='search'],
+.icon-input input[type='password'],
+.icon-input input[type='url'],
+.icon-input input[type='number'],
+.icon-input input[type='date'],
+.icon-input input[type='datetime'],
+.icon-input input[type='datetime-local'],
+.icon-input select {
   padding-right: 42px;
   z-index: 1; }
 
-.input-group-loadable .loader {
+.loadable-input .loader {
   position: absolute;
   width: 18px;
   height: 18px;
   top: 50%;
-  right: 12px;
-  margin: -9px 0 0 0;
+  right: 22px;
+  margin: -9px -9px 0 0;
   z-index: 2; }
 
-.input-group-loadable.input-group-loadable-left input[type='text'], .input-group-loadable.input-group-loadable-left input[type='email'], .input-group-loadable.input-group-loadable-left input[type='search'], .input-group-loadable.input-group-loadable-left input[type='password'], .input-group-loadable.input-group-loadable-left input[type='url'], .input-group-loadable.input-group-loadable-left input[type='number'], .input-group-loadable.input-group-loadable-left input[type='date'], .input-group-loadable.input-group-loadable-left input[type='datetime'], .input-group-loadable.input-group-loadable-left input[type='datetime-local'],
-.input-group-loadable.input-group-loadable-left select {
+.loadable-input.loadable-input-left input[type='text'], .loadable-input.loadable-input-left input[type='email'], .loadable-input.loadable-input-left input[type='search'], .loadable-input.loadable-input-left input[type='password'], .loadable-input.loadable-input-left input[type='url'], .loadable-input.loadable-input-left input[type='number'], .loadable-input.loadable-input-left input[type='date'], .loadable-input.loadable-input-left input[type='datetime'], .loadable-input.loadable-input-left input[type='datetime-local'],
+.loadable-input.loadable-input-left select {
   padding-left: 42px;
   padding-right: 12px; }
 
-.input-group-loadable.input-group-loadable-left .loader {
-  left: 12px;
-  right: auto; }
+.loadable-input.loadable-input-left .loader {
+  left: 22px;
+  right: auto;
+  margin: -9px 0 0 -9px; }
 
-.input-group-icon .icon {
+.icon-input .icon {
   position: absolute;
   top: 50%;
-  right: 12px;
-  margin: -9px 0 0 0;
+  right: 22px;
+  margin: 0;
   color: #626d79;
+  -webkit-transform: translate(50%, -50%);
+  -ms-transform: translate(50%, -50%);
+  -o-transform: translate(50%, -50%);
+  transform: translate(50%, -50%);
   z-index: 2; }
 
-.input-group-icon.input-group-icon-left input[type='text'], .input-group-icon.input-group-icon-left input[type='email'], .input-group-icon.input-group-icon-left input[type='search'], .input-group-icon.input-group-icon-left input[type='password'], .input-group-icon.input-group-icon-left input[type='url'], .input-group-icon.input-group-icon-left input[type='number'], .input-group-icon.input-group-icon-left input[type='date'], .input-group-icon.input-group-icon-left input[type='datetime'], .input-group-icon.input-group-icon-left input[type='datetime-local'],
-.input-group-icon.input-group-icon-left select {
+.icon-input input[type='text']:focus + .icon, .icon-input input[type='text']:active + .icon, .icon-input input[type='email']:focus + .icon, .icon-input input[type='email']:active + .icon, .icon-input input[type='search']:focus + .icon, .icon-input input[type='search']:active + .icon, .icon-input input[type='password']:focus + .icon, .icon-input input[type='password']:active + .icon, .icon-input input[type='url']:focus + .icon, .icon-input input[type='url']:active + .icon, .icon-input input[type='number']:focus + .icon, .icon-input input[type='number']:active + .icon, .icon-input input[type='date']:focus + .icon, .icon-input input[type='date']:active + .icon, .icon-input input[type='datetime']:focus + .icon, .icon-input input[type='datetime']:active + .icon, .icon-input input[type='datetime-local']:focus + .icon, .icon-input input[type='datetime-local']:active + .icon,
+.icon-input select:focus + .icon,
+.icon-input select:active + .icon {
+  color: #111210; }
+
+.icon-input.icon-input-left input[type='text'], .icon-input.icon-input-left input[type='email'], .icon-input.icon-input-left input[type='search'], .icon-input.icon-input-left input[type='password'], .icon-input.icon-input-left input[type='url'], .icon-input.icon-input-left input[type='number'], .icon-input.icon-input-left input[type='date'], .icon-input.icon-input-left input[type='datetime'], .icon-input.icon-input-left input[type='datetime-local'],
+.icon-input.icon-input-left select {
   padding-left: 42px;
   padding-right: 12px; }
 
-.input-group-icon.input-group-icon-left .icon {
-  left: 12px;
-  right: auto; }
+.icon-input.icon-input-left .icon {
+  left: 22px;
+  right: auto;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); }
 
 .label {
   display: inline-block;
@@ -1463,6 +1482,9 @@ tr:last-of-type .td,
   color: #57606B;
   font-weight: 600;
   text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
   cursor: pointer; }
   .tab-item:not(:last-of-type) {
     border-right: 1px solid #E6E6E7; }

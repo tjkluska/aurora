@@ -317,8 +317,8 @@ select {
     }
 }
 
-.input-group-loadable,
-.input-group-icon {
+.loadable-input,
+.icon-input {
     position: relative;
     width: 100%;
 
@@ -329,8 +329,8 @@ select {
     }
 }
 
-.input-group-loadable,
-.input-group-icon {
+.loadable-input,
+.icon-input {
 
     & #{ inputs() },
     & select {
@@ -339,19 +339,19 @@ select {
     }
 }
 
-.input-group-loadable {
+.loadable-input {
 
     & .loader {
         position: absolute;
         width: 18px;
         height: 18px;
         top: 50%;
-        right: 12px;
-        margin: -9px 0 0 0;
+        right: ($inputHeight / 2) + 1;
+        margin: -9px -9px 0 0;
         z-index: 2;
     }
 
-    &.input-group-loadable-left {
+    &.loadable-input-left {
 
         & #{ inputs() },
         & select {
@@ -360,24 +360,41 @@ select {
         }
 
         & .loader {
-            left: 12px;
+            left: ($inputHeight / 2) + 1;
             right: auto;
+            margin: -9px 0 0 -9px;
         }
     }
 }
 
-.input-group-icon {
+.icon-input {
 
     & .icon {
         position: absolute;
         top: 50%;
-        right: 12px;
-        margin: -9px 0 0 0;
+        right: ($inputHeight / 2) + 1;
+        margin: 0;
         color: $colourFontSecondaryLight;
+        -webkit-transform: translate(50%, -50%);
+        -ms-transform: translate(50%, -50%);
+        -o-transform: translate(50%, -50%);
+        transform: translate(50%, -50%);
         z-index: 2;
     }
 
-    &.input-group-icon-left {
+    & #{ inputs() },
+    & select {
+
+        &:focus,
+        &:active {
+
+            & + .icon {
+                color: $colourFont;
+            }
+        }
+    }
+
+    &.icon-input-left {
 
         & #{ inputs() },
         & select {
@@ -386,8 +403,12 @@ select {
         }
 
         & .icon {
-            left: 12px;
+            left: ($inputHeight / 2) + 1;
             right: auto;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
         }
     }
 }
