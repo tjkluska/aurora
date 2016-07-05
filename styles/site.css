@@ -137,6 +137,7 @@ small {
   text-align: right; }
 
 .trim-text {
+  display: block;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; }
@@ -179,8 +180,11 @@ small {
   border-radius: 2px; }
 
 .grid {
+  width: auto;
+  max-width: none;
   margin-left: -15px;
-  margin-right: -15px; }
+  margin-right: -15px;
+  margin-bottom: 15px; }
   .grid .grid-cell {
     padding-left: 15px;
     padding-right: 15px; }
@@ -1478,13 +1482,11 @@ tr:last-of-type .td,
 
 .tab-item {
   position: relative;
+  min-width: 0;
   padding: 12px 25px;
   color: #57606B;
   font-weight: 600;
   text-align: center;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   cursor: pointer; }
   .tab-item:not(:last-of-type) {
     border-right: 1px solid #E6E6E7; }

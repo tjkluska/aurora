@@ -14,11 +14,11 @@
 
 .tab-item {
     position: relative;
+    min-width: 0;
     padding: $buttonPaddingVertical $buttonPaddingHorizontal;
     color: $colourFontSecondary;
     font-weight: $fontWeightHeavy;
     text-align: center;
-    @include trim-text;
     cursor: pointer;
 
     &:not(:last-of-type) {

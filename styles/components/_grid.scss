@@ -1,8 +1,11 @@
 @import "../abstracts/_variables.scss";
 
 .grid {
+    width: auto;
+    max-width: none;
     margin-left: -$layoutPaddingMedium;
     margin-right: -$layoutPaddingMedium;
+    margin-bottom: $layoutPaddingMedium;
 
     & .grid-cell {
         padding-left: $layoutPaddingMedium;

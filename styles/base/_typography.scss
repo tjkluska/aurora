@@ -108,5 +108,6 @@ small {
 }
 
 .trim-text {
+    display: block;
     @include trim-text;
 }
